@@ -1,0 +1,53 @@
+services:
+  backend:
+    build: ./backend
+    environment:
+      DATA_DIR: /data
+      CACHE_DIR: /data/cache
+      DATABASE_URL: sqlite:////data/backtests.sqlite3
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}
+      ALLOWED_HOSTS: backend,localhost,127.0.0.1
+      YAHOO_REQUEST_TIMEOUT_SECONDS: ${YAHOO_REQUEST_TIMEOUT_SECONDS:-20}
+      YAHOO_MAX_RETRIES: ${YAHOO_MAX_RETRIES:-3}
+      YAHOO_RETRY_BACKOFF_SECONDS: ${YAHOO_RETRY_BACKOFF_SECONDS:-1}
+      YAHOO_STATUS_TIMEOUT_SECONDS: ${YAHOO_STATUS_TIMEOUT_SECONDS:-3}
+      YAHOO_OFFLINE_COOLDOWN_SECONDS: ${YAHOO_OFFLINE_COOLDOWN_SECONDS:-300}
+      YAHOO_STATUS_CACHE_SECONDS: ${YAHOO_STATUS_CACHE_SECONDS:-60}
+      STOOQ_REQUEST_TIMEOUT_SECONDS: ${STOOQ_REQUEST_TIMEOUT_SECONDS:-20}
+      STOOQ_MAX_RETRIES: ${STOOQ_MAX_RETRIES:-2}
+      STOOQ_RETRY_BACKOFF_SECONDS: ${STOOQ_RETRY_BACKOFF_SECONDS:-1}
+      STOOQ_STATUS_TIMEOUT_SECONDS: ${STOOQ_STATUS_TIMEOUT_SECONDS:-3}
+      STOOQ_STATUS_CACHE_SECONDS: ${STOOQ_STATUS_CACHE_SECONDS:-60}
+      STOOQ_OFFLINE_COOLDOWN_SECONDS: ${STOOQ_OFFLINE_COOLDOWN_SECONDS:-300}
+      RESEARCH_DATA_DIR: /data
+      RESEARCH_REPORTS_DIR: /research-reports
+    volumes:
+      - ./data:/data
+      - ./reports:/research-reports:ro
+    expose:
+      - "8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health').read()"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    restart: unless-stopped
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL:-}
+        BACKEND_INTERNAL_URL: http://backend:8000
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "${LAN_IP:-127.0.0.1}:3000:3000"
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:3000"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    restart: unless-stopped

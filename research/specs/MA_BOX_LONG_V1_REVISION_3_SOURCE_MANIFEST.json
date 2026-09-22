@@ -1,0 +1,26 @@
+{
+  "strategy_revision": "MA_BOX_LONG_V1",
+  "spec_revision": 3,
+  "master": {
+    "source_file": "MA_BOX_LONG_V1_MASTER_SOL_FROZEN_RESPONSE.md",
+    "normalized_bytes": 24208,
+    "normalized_sha256": "b6013c9ad8b1cc356fa01a211d653e39772d8ca6c822d2cee2d1e4e53d8f61e6"
+  },
+  "revision2": {
+    "source_file": "MA_BOX_LONG_V1_REVISION_2_SOL_FROZEN_RESPONSE.md",
+    "normalized_bytes": 10670,
+    "normalized_sha256": "048c74b53add3a4fb56bace363a025f9ed3cce49e01d7426f6ffaaba16277d5c"
+  },
+  "revision3": {
+    "source_file": "MA_BOX_LONG_V1_REVISION_3_AMENDMENT_SOURCE.md",
+    "source_identity": "prior Sol-authorized Revision 3 amendment source",
+    "normalized_bytes": 24937,
+    "normalized_sha256": "6eedcf3e759a452fe704a5c5675d14b3b02842d09f6e1c73e81db86d088859fa"
+  },
+  "combined_artifact": {
+    "path": "research/specs/MA_BOX_LONG_V1_REVISION_3.md",
+    "bytes": 60025,
+    "lines": 3561,
+    "sha256": "1edad0648095eb8261a79e6f9bf712f23a6dbb4db9271a1f0273ad7c79dbab0d"
+  }
+}

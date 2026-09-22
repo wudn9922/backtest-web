@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "gate": "G0",
+  "capture_kind": "pre-removal inventory recorded before C1 restoration",
+  "repository": {
+    "branch": "cloud/c1-backend-foundation",
+    "head": "09239846edd92d16dc2278205ee945d5d7d29f4d",
+    "pre_cloud_v1_commit": "09239846edd92d16dc2278205ee945d5d7d29f4d",
+    "pre_cloud_v1_tag_object": "86f74fbca8893b96d2640a569792b7e69cd958fd"
+  },
+  "tracked_c1_modifications": [
+    ".github/workflows/ci.yml",
+    ".gitignore",
+    "research/cloud/CLOUD_MIGRATION_POLICY.md"
+  ],
+  "c1_only_untracked_roots": [
+    ".dockerignore",
+    "backend/.env.cloud.example",
+    "backend/Dockerfile.cloud",
+    "backend/app/cloud",
+    "backend/app/cloud_main.py",
+    "backend/requirements-ci.in",
+    "backend/requirements-ci.lock",
+    "backend/requirements-cloud.in",
+    "backend/requirements-cloud.lock",
+    "backend/tests/cloud",
+    "research/cloud/GATE_C1_IMPLEMENTATION_MANIFEST.json",
+    "research/cloud/GATE_C1_PRECHANGE_BASELINE.json",
+    "terraform/cloud"
+  ],
+  "ignored_c1_paths": [
+    "backend/app/cloud/__pycache__",
+    "backend/tests/cloud/__pycache__"
+  ],
+  "classification": {
+    "tracked": "C1 modifications to existing CI, ignore, and cloud-policy files",
+    "untracked": "C1-only Cloud Run, Firestore, GCS, Cloud Tasks, Terraform, container, lockfile, environment, and test additions",
+    "unrelated_local_data": "production databases, caches, reports, backups, virtual environments, and frontend build output"
+  },
+  "privacy": {
+    "contains_absolute_path": false,
+    "contains_email": false,
+    "contains_credentials": false
+  }
+}

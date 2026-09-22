@@ -1,0 +1,21 @@
+52. Day1使用completed MA(t)，不是MA(t-1)
+53. Day1只在close確認；High-only不成立
+54. Post-event grey zone不rearm
+55. Raw opposite-side completed close才rearm
+56. Study開始無prior latch時不得創造事件
+57. Target observer最早從D2 Open開始
+58. Day1 intraday target不得回填
+59. Long/Short open-gap target/stop mirror
+60. Return使用opposite ±0.2%
+61. Trend away使用same-side ±0.2%
+62. Return優先於Sideways
+63. Retest優先於Sideways
+64. Sideways優先於Trend
+65. Frozen VisualBoxObserver使用Rev2 qualifying formation bars
+66. ATR invalid只排除ATR target，不排除+3% target
+67. D2與volume joint denominator要求兩者均evaluable
+68. Target outcomes按target獨立
+69. Entanglement formed after Day1不得回畫
+70. Short E=MA(D1-1)×0.99
+71. Short stop=MA(u-1)×1.015
+72. Config/schema不存在target timeout或failure timeout

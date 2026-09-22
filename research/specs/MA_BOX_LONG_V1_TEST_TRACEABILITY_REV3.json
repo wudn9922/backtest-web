@@ -1,0 +1,1332 @@
+{
+  "schema_version": 3,
+  "strategy_revision": "MA_BOX_LONG_V1",
+  "spec_revision": 3,
+  "spec_artifact": "MA_BOX_LONG_V1_REVISION_3.md",
+  "binding_mode": "INDEPENDENT_EXPLICIT_REGISTRATION",
+  "coverage_statuses": [
+    "DIRECT",
+    "COMBINED_DIRECT",
+    "MISSING"
+  ],
+  "source_matrix_counts": {
+    "MASTER_SPEC": 47,
+    "REVISION_2_AMENDMENT": 21,
+    "REVISION_3_AMENDMENT": 9
+  },
+  "requirements": [
+    {
+      "requirement_id": "MASTER-01",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 1,
+      "source_text_verbatim": "1. 四天三根貫穿且 close side 切換 → Box starts  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_entanglement_uses_exact_four_bars_and_three_qualifying_bars",
+      "test_name": "test_entanglement_uses_exact_four_bars_and_three_qualifying_bars",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "1. 四天三根貫穿且 close side 切換 → Box starts  ",
+      "binding_id": "B-MASTER-01",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_entanglement_uses_exact_four_bars_and_three_qualifying_bars"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-02",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 2,
+      "source_text_verbatim": "2. 三根貫穿但 closes 同側 → no box  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_entanglement_rejects_three_qualifying_closes_on_one_side",
+      "test_name": "test_entanglement_rejects_three_qualifying_closes_on_one_side",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "2. 三根貫穿但 closes 同側 → no box  ",
+      "binding_id": "B-MASTER-02",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_entanglement_rejects_three_qualifying_closes_on_one_side"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-03",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 3,
+      "source_text_verbatim": "3. Equality close 不提供 side switch  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_entanglement_rejects_no_side_switch",
+      "test_name": "test_entanglement_rejects_no_side_switch",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "3. Equality close 不提供 side switch  ",
+      "binding_id": "B-MASTER-03",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_entanglement_rejects_no_side_switch"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-04",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 4,
+      "source_text_verbatim": "4. Box 不可 retroactive  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_box_creation_is_not_retroactive",
+      "test_name": "test_revision3_box_creation_is_not_retroactive",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "4. Box 不可 retroactive  ",
+      "binding_id": "B-MASTER-04",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_box_creation_is_not_retroactive"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-05",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 5,
+      "source_text_verbatim": "5. 持倉中形成 Box → 不 exit  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_box_formation_while_long_does_not_exit_position",
+      "test_name": "test_revision3_box_formation_while_long_does_not_exit_position",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "5. 持倉中形成 Box → 不 exit  ",
+      "binding_id": "B-MASTER-05",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_box_formation_while_long_does_not_exit_position"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-06",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 6,
+      "source_text_verbatim": "6. BOX_ACTIVE 阻止 normal entry  ",
+      "test_file": "backend/tests/test_ma_box_long.py",
+      "test_function": "test_box_blocks_normal_entry_and_keeps_counterfactual_separate",
+      "test_name": "test_box_blocks_normal_entry_and_keeps_counterfactual_separate",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "6. BOX_ACTIVE 阻止 normal entry  ",
+      "binding_id": "B-MASTER-06",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long.py::test_box_blocks_normal_entry_and_keeps_counterfactual_separate"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-07",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 7,
+      "source_text_verbatim": "7. Filtered entry 與 baseline canonical execution 相等  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_counterfactual_persisted_full_execution_parity_and_shadow_isolation",
+      "test_name": "test_revision3_counterfactual_persisted_full_execution_parity_and_shadow_isolation",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "7. Filtered entry 與 baseline canonical execution 相等  ",
+      "binding_id": "B-MASTER-07",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_counterfactual_persisted_full_execution_parity_and_shadow_isolation"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-08",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 8,
+      "source_text_verbatim": "8. Breakout close 不得同日 entry  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_breakout_candle_cannot_fill_on_same_day",
+      "test_name": "test_revision3_breakout_candle_cannot_fill_on_same_day",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "8. Breakout close 不得同日 entry  ",
+      "binding_id": "B-MASTER-08",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_breakout_candle_cannot_fill_on_same_day"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-09",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 9,
+      "source_text_verbatim": "9. Indicative risk ≤5% → DIRECT_ENTRY_ELIGIBLE  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_stage_a_structural_gate_boundaries",
+      "test_name": "test_stage_a_structural_gate_boundaries",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "9. Indicative risk ≤5% → DIRECT_ENTRY_ELIGIBLE  ",
+      "binding_id": "B-MASTER-09",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_stage_a_structural_gate_boundaries"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-10",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 10,
+      "source_text_verbatim": "10. Indicative risk >5% → WAIT_RETEST  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_stage_a_structural_gate_boundaries",
+      "test_name": "test_stage_a_structural_gate_boundaries",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "10. Indicative risk >5% → WAIT_RETEST  ",
+      "binding_id": "B-MASTER-10",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_stage_a_structural_gate_boundaries"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-11",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 11,
+      "source_text_verbatim": "11. Next-open actual risk ≤5% → direct entry  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_stage_b_execution_gate_boundaries",
+      "test_name": "test_stage_b_execution_gate_boundaries",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "11. Next-open actual risk ≤5% → direct entry  ",
+      "binding_id": "B-MASTER-11",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_stage_b_execution_gate_boundaries"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-12",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 12,
+      "source_text_verbatim": "12. Next-open gap risk >5% → no entry  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_stage_b_execution_gate_boundaries",
+      "test_name": "test_stage_b_execution_gate_boundaries",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "12. Next-open gap risk >5% → no entry  ",
+      "binding_id": "B-MASTER-12",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_stage_b_execution_gate_boundaries"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-13",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 13,
+      "source_text_verbatim": "13. Next-open price ≤stop → no entry  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_stage_b_execution_gate_boundaries",
+      "test_name": "test_stage_b_execution_gate_boundaries",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "13. Next-open price ≤stop → no entry  ",
+      "binding_id": "B-MASTER-13",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_stage_b_execution_gate_boundaries"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-14",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 14,
+      "source_text_verbatim": "14. Retest Low≤MA 且 Close>MA → close 後確認  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_wait_retest_valid_retest_has_priority_over_failed_breakout",
+      "test_name": "test_revision3_wait_retest_valid_retest_has_priority_over_failed_breakout",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "14. Retest Low≤MA 且 Close>MA → close 後確認  ",
+      "binding_id": "B-MASTER-14",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_wait_retest_valid_retest_has_priority_over_failed_breakout"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-15",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 15,
+      "source_text_verbatim": "15. Retest 不得成交在當日 Low、MA 或 Close  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_retest_confirmation_executes_only_next_open",
+      "test_name": "test_revision3_retest_confirmation_executes_only_next_open",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "15. Retest 不得成交在當日 Low、MA 或 Close  ",
+      "binding_id": "B-MASTER-15",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_retest_confirmation_executes_only_next_open"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-16",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 16,
+      "source_text_verbatim": "16. Retest next-open risk≤5% → entry  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_stage_b_execution_gate_boundaries",
+      "test_name": "test_stage_b_execution_gate_boundaries",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "16. Retest next-open risk≤5% → entry  ",
+      "binding_id": "B-MASTER-16",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_stage_b_execution_gate_boundaries"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-17",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 17,
+      "source_text_verbatim": "17. Retest 與 Close≤BoxHigh 同日 → retest 優先  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_wait_retest_valid_retest_has_priority_over_failed_breakout",
+      "test_name": "test_revision3_wait_retest_valid_retest_has_priority_over_failed_breakout",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "17. Retest 與 Close≤BoxHigh 同日 → retest 優先  ",
+      "binding_id": "B-MASTER-17",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_wait_retest_valid_retest_has_priority_over_failed_breakout"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-18",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 18,
+      "source_text_verbatim": "18. Non-retest Close≤BoxHigh → failed/reactivated  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_wait_retest_non_retest_close_reactivates_same_box",
+      "test_name": "test_revision3_wait_retest_non_retest_close_reactivates_same_box",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "18. Non-retest Close≤BoxHigh → failed/reactivated  ",
+      "binding_id": "B-MASTER-18",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_wait_retest_non_retest_close_reactivates_same_box"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-19",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 19,
+      "source_text_verbatim": "19. Rebreakout → new attempt ID  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_failed_breakout_next_attempt_gets_new_id",
+      "test_name": "test_revision3_failed_breakout_next_attempt_gets_new_id",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "19. Rebreakout → new attempt ID  ",
+      "binding_id": "B-MASTER-19",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_failed_breakout_next_attempt_gets_new_id"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-20",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 20,
+      "source_text_verbatim": "20. WAIT_RETEST 20-session expiry  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_wait_retest_has_no_timeout_even_after_sixty_sessions",
+      "test_name": "test_revision3_wait_retest_has_no_timeout_even_after_sixty_sessions",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "20. WAIT_RETEST 20-session expiry  ",
+      "binding_id": "B-MASTER-20",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_wait_retest_has_no_timeout_even_after_sixty_sessions"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-21",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 21,
+      "source_text_verbatim": "21. Down break while flat → no short  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_no_short_execution_is_possible_on_box_down_break",
+      "test_name": "test_no_short_execution_is_possible_on_box_down_break",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "21. Down break while flat → no short  ",
+      "binding_id": "B-MASTER-21",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_no_short_execution_is_possible_on_box_down_break"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-22",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 22,
+      "source_text_verbatim": "22. Down break while long → no secondary exit  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_down_break_while_long_does_not_force_box_exit",
+      "test_name": "test_revision3_down_break_while_long_does_not_force_box_exit",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "22. Down break while long → no secondary exit  ",
+      "binding_id": "B-MASTER-22",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_down_break_while_long_does_not_force_box_exit"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-23",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 23,
+      "source_text_verbatim": "23. MA−1.5% intraday fill → stop level  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_ma_stop_intraday_uses_stop_level",
+      "test_name": "test_revision3_ma_stop_intraday_uses_stop_level",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "23. MA−1.5% intraday fill → stop level  ",
+      "binding_id": "B-MASTER-23",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_ma_stop_intraday_uses_stop_level"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-24",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 24,
+      "source_text_verbatim": "24. MA stop gap-through → Open  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_ma_stop_gap_through_uses_open",
+      "test_name": "test_revision3_ma_stop_gap_through_uses_open",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "24. MA stop gap-through → Open  ",
+      "binding_id": "B-MASTER-24",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_ma_stop_gap_through_uses_open"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-25",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 25,
+      "source_text_verbatim": "25. Direct/retest open entry後同日 stop可觸發  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_entry_then_same_day_stop_leaves_position_flat",
+      "test_name": "test_revision3_entry_then_same_day_stop_leaves_position_flat",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "25. Direct/retest open entry後同日 stop可觸發  ",
+      "binding_id": "B-MASTER-25",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_entry_then_same_day_stop_leaves_position_flat"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-26",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 26,
+      "source_text_verbatim": "26. No fixed profit target  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_box_result_contains_no_fixed_profit_target_reason",
+      "test_name": "test_box_result_contains_no_fixed_profit_target_reason",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "26. No fixed profit target  ",
+      "binding_id": "B-MASTER-26",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_box_result_contains_no_fixed_profit_target_reason"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-27",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 27,
+      "source_text_verbatim": "27. Counterfactual lifecycle exactly equals baseline  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_counterfactual_persisted_full_execution_parity_and_shadow_isolation",
+      "test_name": "test_revision3_counterfactual_persisted_full_execution_parity_and_shadow_isolation",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "27. Counterfactual lifecycle exactly equals baseline  ",
+      "binding_id": "B-MASTER-27",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_counterfactual_persisted_full_execution_parity_and_shadow_isolation"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-28",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 28,
+      "source_text_verbatim": "28. Counterfactual capital不影響實際 equity  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_counterfactual_persisted_full_execution_parity_and_shadow_isolation",
+      "test_name": "test_revision3_counterfactual_persisted_full_execution_parity_and_shadow_isolation",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "28. Counterfactual capital不影響實際 equity  ",
+      "binding_id": "B-MASTER-28",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_counterfactual_persisted_full_execution_parity_and_shadow_isolation"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-29",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 29,
+      "source_text_verbatim": "29. Nearby periods box states完全隔離  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_targeted_sma23_execution_mutation_leaves_sma24_sma25_byte_identical",
+      "test_name": "test_revision3_targeted_sma23_execution_mutation_leaves_sma24_sma25_byte_identical",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "29. Nearby periods box states完全隔離  ",
+      "binding_id": "B-MASTER-29",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_targeted_sma23_execution_mutation_leaves_sma24_sma25_byte_identical"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-30",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 30,
+      "source_text_verbatim": "30. Current breakout bar不可先更新 boundary  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_breakout_candle_is_evaluated_before_boundary_contacts_are_added",
+      "test_name": "test_breakout_candle_is_evaluated_before_boundary_contacts_are_added",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "30. Current breakout bar不可先更新 boundary  ",
+      "binding_id": "B-MASTER-30",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_breakout_candle_is_evaluated_before_boundary_contacts_are_added"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-31",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 31,
+      "source_text_verbatim": "31. ATR tolerance frozen for box lifecycle  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_atr14_is_the_only_tolerance_source",
+      "test_name": "test_revision3_atr14_is_the_only_tolerance_source",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "31. ATR tolerance frozen for box lifecycle  ",
+      "binding_id": "B-MASTER-31",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_atr14_is_the_only_tolerance_source"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-32",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 32,
+      "source_text_verbatim": "32. Contact clustering每個 OHLC weight=1  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_open_close_contacts_are_partitioned_by_midpoint_without_cross_side_wicks",
+      "test_name": "test_open_close_contacts_are_partitioned_by_midpoint_without_cross_side_wicks",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "32. Contact clustering每個 OHLC weight=1  ",
+      "binding_id": "B-MASTER-32",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_open_close_contacts_are_partitioned_by_midpoint_without_cross_side_wicks"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-33",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 33,
+      "source_text_verbatim": "33. Boundary tie-break deterministic  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_equal_contact_candidate_with_more_bars_and_lower_mad_still_never_updates",
+      "test_name": "test_equal_contact_candidate_with_more_bars_and_lower_mad_still_never_updates",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "33. Boundary tie-break deterministic  ",
+      "binding_id": "B-MASTER-33",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_equal_contact_candidate_with_more_bars_and_lower_mad_still_never_updates"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-34",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 34,
+      "source_text_verbatim": "34. Boundary不得交叉  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_equal_contact_candidate_with_more_bars_and_lower_mad_still_never_updates",
+      "test_name": "test_equal_contact_candidate_with_more_bars_and_lower_mad_still_never_updates",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "34. Boundary不得交叉  ",
+      "binding_id": "B-MASTER-34",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_equal_contact_candidate_with_more_bars_and_lower_mad_still_never_updates"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-35",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 35,
+      "source_text_verbatim": "35. Extreme wick不能在沒有更高 contact evidence時重畫  ",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_equal_contact_candidate_with_more_bars_and_lower_mad_still_never_updates",
+      "test_name": "test_equal_contact_candidate_with_more_bars_and_lower_mad_still_never_updates",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "35. Extreme wick不能在沒有更高 contact evidence時重畫  ",
+      "binding_id": "B-MASTER-35",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_equal_contact_candidate_with_more_bars_and_lower_mad_still_never_updates"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-36",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 36,
+      "source_text_verbatim": "36. Invalidated box必須等待四根新 bars rearm  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_new_box_requires_invalidation_and_four_fresh_bars",
+      "test_name": "test_revision3_new_box_requires_invalidation_and_four_fresh_bars",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "36. Invalidated box必須等待四根新 bars rearm  ",
+      "binding_id": "B-MASTER-36",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_new_box_requires_invalidation_and_four_fresh_bars"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-37",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 37,
+      "source_text_verbatim": "37. OHLC Heuristic green path O-L-H-C  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_ohlc_green_path_is_deterministic",
+      "test_name": "test_ohlc_green_path_is_deterministic",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "37. OHLC Heuristic green path O-L-H-C  ",
+      "binding_id": "B-MASTER-37",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_ohlc_green_path_is_deterministic"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-38",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 38,
+      "source_text_verbatim": "38. OHLC Heuristic red path O-H-L-C  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_ohlc_red_path_is_deterministic",
+      "test_name": "test_ohlc_red_path_is_deterministic",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "38. OHLC Heuristic red path O-H-L-C  ",
+      "binding_id": "B-MASTER-38",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_ohlc_red_path_is_deterministic"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-39",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 39,
+      "source_text_verbatim": "39. Entry/exit commission reconciliation  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_daily_bh_ledger_matches_hand_calculation",
+      "test_name": "test_daily_bh_ledger_matches_hand_calculation",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "39. Entry/exit commission reconciliation  ",
+      "binding_id": "B-MASTER-39",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_daily_bh_ledger_matches_hand_calculation"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-40",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 40,
+      "source_text_verbatim": "40. Slippage reconciliation  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_daily_bh_ledger_matches_hand_calculation",
+      "test_name": "test_daily_bh_ledger_matches_hand_calculation",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "40. Slippage reconciliation  ",
+      "binding_id": "B-MASTER-40",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_daily_bh_ledger_matches_hand_calculation"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-41",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 41,
+      "source_text_verbatim": "41. Forced end-date exit  ",
+      "test_file": "backend/tests/test_ma_box_long.py",
+      "test_function": "test_buy_and_hold_single_session_still_has_forced_close",
+      "test_name": "test_buy_and_hold_single_session_still_has_forced_close",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "41. Forced end-date exit  ",
+      "binding_id": "B-MASTER-41",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long.py::test_buy_and_hold_single_session_still_has_forced_close"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-42",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 42,
+      "source_text_verbatim": "42. Common evaluation start fairness  ",
+      "test_file": "backend/tests/test_ma_box_long.py",
+      "test_function": "test_common_start_uses_requested_period_warmup_and_bh_is_matched",
+      "test_name": "test_common_start_uses_requested_period_warmup_and_bh_is_matched",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "42. Common evaluation start fairness  ",
+      "binding_id": "B-MASTER-42",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long.py::test_common_start_uses_requested_period_warmup_and_bh_is_matched"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-43",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 43,
+      "source_text_verbatim": "43. B&H 不取得 warm-up return  ",
+      "test_file": "backend/tests/test_ma_box_long.py",
+      "test_function": "test_common_start_uses_requested_period_warmup_and_bh_is_matched",
+      "test_name": "test_common_start_uses_requested_period_warmup_and_bh_is_matched",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "43. B&H 不取得 warm-up return  ",
+      "binding_id": "B-MASTER-43",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long.py::test_common_start_uses_requested_period_warmup_and_bh_is_matched"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-44",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 44,
+      "source_text_verbatim": "44. Full no-lookahead mutation test  ",
+      "test_file": "backend/tests/test_ma_box_long.py",
+      "test_function": "test_no_lookahead_future_mutation_does_not_change_prior_events",
+      "test_name": "test_no_lookahead_future_mutation_does_not_change_prior_events",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "44. Full no-lookahead mutation test  ",
+      "binding_id": "B-MASTER-44",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long.py::test_no_lookahead_future_mutation_does_not_change_prior_events"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-45",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 45,
+      "source_text_verbatim": "45. Event/chart values與 canonical audit一致  ",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_box_data_contains_causal_stepwise_boundary_values",
+      "test_name": "test_box_data_contains_causal_stepwise_boundary_values",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "45. Event/chart values與 canonical audit一致  ",
+      "binding_id": "B-MASTER-45",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_box_data_contains_causal_stepwise_boundary_values"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-46",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 46,
+      "source_text_verbatim": "46. Existing Simple/Advanced regression全部通過  ",
+      "test_file": "backend/tests/test_engine_integration.py",
+      "test_function": "test_engine_runs_using_daily_ohlc_only",
+      "test_name": "test_engine_runs_using_daily_ohlc_only",
+      "coverage_status": "COMBINED_DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "46. Existing Simple/Advanced regression全部通過  ",
+      "binding_id": "B-MASTER-46",
+      "bound_tests": [
+        "backend/tests/test_engine_integration.py::test_engine_runs_using_daily_ohlc_only",
+        "backend/tests/test_strategy_rules.py::test_advanced_flat_bar_below_trigger_is_a_noop",
+        "backend/tests/test_advanced_day1_stop.py::test_day1_low_above_three_percent_stop_does_not_exit"
+      ]
+    },
+    {
+      "requirement_id": "MASTER-47",
+      "source_spec": "MASTER_SPEC",
+      "source_section": "## 19. Frozen test matrix",
+      "source_test_number": 47,
+      "source_text_verbatim": "47. Existing cache/history rows byte-for-byte不變  \n\n---",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_repository_ma_box_migration_is_idempotent_and_preserves_legacy_rows",
+      "test_name": "test_repository_ma_box_migration_is_idempotent_and_preserves_legacy_rows",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "47. Existing cache/history rows byte-for-byte不變  \n\n---",
+      "binding_id": "B-MASTER-47",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_repository_ma_box_migration_is_idempotent_and_preserves_legacy_rows"
+      ]
+    },
+    {
+      "requirement_id": "REV2-01",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 1,
+      "source_text_verbatim": "1. 三根 qualifying 加一根 nonqualifying：\n\n```text\nInitial BoxHigh/BoxLow\n只來自三根 qualifying bars\n```",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_initial_box_excludes_nonqualifying_formation_bar",
+      "test_name": "test_initial_box_excludes_nonqualifying_formation_bar",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "1. 三根 qualifying 加一根 nonqualifying：\n\n```text\nInitial BoxHigh/BoxLow\n只來自三根 qualifying bars\n```",
+      "binding_id": "B-REV2-01",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_initial_box_excludes_nonqualifying_formation_bar"
+      ]
+    },
+    {
+      "requirement_id": "REV2-02",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 2,
+      "source_text_verbatim": "2. 四根 qualifying：\n\n```text\n四根全部使用\n```",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_initial_box_includes_all_four_qualifying_bars",
+      "test_name": "test_initial_box_includes_all_four_qualifying_bars",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "2. 四根 qualifying：\n\n```text\n四根全部使用\n```",
+      "binding_id": "B-REV2-02",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_initial_box_includes_all_four_qualifying_bars"
+      ]
+    },
+    {
+      "requirement_id": "REV2-03",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 3,
+      "source_text_verbatim": "3. Nonqualifying bar 不得進入 initial contact pool 或 midpoint。",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_initial_box_excludes_nonqualifying_formation_bar",
+      "test_name": "test_initial_box_excludes_nonqualifying_formation_bar",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "3. Nonqualifying bar 不得進入 initial contact pool 或 midpoint。",
+      "binding_id": "B-REV2-03",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_initial_box_excludes_nonqualifying_formation_bar"
+      ]
+    },
+    {
+      "requirement_id": "REV2-04",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 4,
+      "source_text_verbatim": "4. Upper clustering：\n\n```text\nHigh/Open/Close 可計數\nLow 永遠不得提供 upper contact\n```",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_upper_contact_pool_has_no_low_field",
+      "test_name": "test_upper_contact_pool_has_no_low_field",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "4. Upper clustering：\n\n```text\nHigh/Open/Close 可計數\nLow 永遠不得提供 upper contact\n```",
+      "binding_id": "B-REV2-04",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_upper_contact_pool_has_no_low_field"
+      ]
+    },
+    {
+      "requirement_id": "REV2-05",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 5,
+      "source_text_verbatim": "5. Lower clustering：\n\n```text\nLow/Open/Close 可計數\nHigh 永遠不得提供 lower contact\n```",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_lower_contact_pool_has_no_high_field",
+      "test_name": "test_lower_contact_pool_has_no_high_field",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "5. Lower clustering：\n\n```text\nLow/Open/Close 可計數\nHigh 永遠不得提供 lower contact\n```",
+      "binding_id": "B-REV2-05",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_lower_contact_pool_has_no_high_field"
+      ]
+    },
+    {
+      "requirement_id": "REV2-06",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 6,
+      "source_text_verbatim": "6. 相同 Open/Close field type 可依 midpoint 分區成 upper 或 lower candidate。",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_open_close_contacts_are_partitioned_by_midpoint_without_cross_side_wicks",
+      "test_name": "test_open_close_contacts_are_partitioned_by_midpoint_without_cross_side_wicks",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "6. 相同 Open/Close field type 可依 midpoint 分區成 upper 或 lower candidate。",
+      "binding_id": "B-REV2-06",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_open_close_contacts_are_partitioned_by_midpoint_without_cross_side_wicks"
+      ]
+    },
+    {
+      "requirement_id": "REV2-07",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 7,
+      "source_text_verbatim": "7. `0.10 × ATR14` fixture：\n   - tolerance 內的視覺同水平 contacts 必須成為同一 cluster\n   - tolerance 外的明顯不同水平不得合併",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_cluster_recomputes_level_as_median_and_mad",
+      "test_name": "test_cluster_recomputes_level_as_median_and_mad",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "7. `0.10 × ATR14` fixture：\n   - tolerance 內的視覺同水平 contacts 必須成為同一 cluster\n   - tolerance 外的明顯不同水平不得合併",
+      "binding_id": "B-REV2-07",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_cluster_recomputes_level_as_median_and_mad"
+      ]
+    },
+    {
+      "requirement_id": "REV2-08",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 8,
+      "source_text_verbatim": "8. Audit/config/chart 顯示完全相同的 frozen tolerance value。\n\n### Structural and execution risk",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_atr14_is_the_only_tolerance_source",
+      "test_name": "test_revision3_atr14_is_the_only_tolerance_source",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "8. Audit/config/chart 顯示完全相同的 frozen tolerance value。\n\n### Structural and execution risk",
+      "binding_id": "B-REV2-08",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_atr14_is_the_only_tolerance_source"
+      ]
+    },
+    {
+      "requirement_id": "REV2-09",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 9,
+      "source_text_verbatim": "9. BoxHigh-to-stop risk >5%：\n\n```text\nNO_ENTRY_BOX_RISK_GT_5\nWAIT_RETEST\n```",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_stage_a_structural_gate_boundaries",
+      "test_name": "test_stage_a_structural_gate_boundaries",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "9. BoxHigh-to-stop risk >5%：\n\n```text\nNO_ENTRY_BOX_RISK_GT_5\nWAIT_RETEST\n```",
+      "binding_id": "B-REV2-09",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_stage_a_structural_gate_boundaries"
+      ]
+    },
+    {
+      "requirement_id": "REV2-10",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 10,
+      "source_text_verbatim": "10. BoxHigh-to-stop risk ≤5%，next-open gap 後 actual risk >5%：\n\n```text\nNO_ENTRY_GAP_RISK_GT_5\nWAIT_RETEST\n```",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_stage_b_execution_gate_boundaries",
+      "test_name": "test_stage_b_execution_gate_boundaries",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "10. BoxHigh-to-stop risk ≤5%，next-open gap 後 actual risk >5%：\n\n```text\nNO_ENTRY_GAP_RISK_GT_5\nWAIT_RETEST\n```",
+      "binding_id": "B-REV2-10",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_stage_b_execution_gate_boundaries"
+      ]
+    },
+    {
+      "requirement_id": "REV2-11",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 11,
+      "source_text_verbatim": "11. BoxHigh-to-stop risk ≤5%，且 actual-open risk ≤5%：\n\n```text\nDirect entry\n```",
+      "test_file": "backend/tests/test_ma_box_long_revision2.py",
+      "test_function": "test_stage_b_execution_gate_boundaries",
+      "test_name": "test_stage_b_execution_gate_boundaries",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "11. BoxHigh-to-stop risk ≤5%，且 actual-open risk ≤5%：\n\n```text\nDirect entry\n```",
+      "binding_id": "B-REV2-11",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision2.py::test_stage_b_execution_gate_boundaries"
+      ]
+    },
+    {
+      "requirement_id": "REV2-12",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 12,
+      "source_text_verbatim": "12. BoxRisk≤0：\n\n```text\nNO_ENTRY_BOX_RISK_NOT_POSITIVE\nWAIT_RETEST\n```",
+      "test_file": "backend/tests/test_ma_box_long.py",
+      "test_function": "test_structural_gate_rejects_nonpositive_risk",
+      "test_name": "test_structural_gate_rejects_nonpositive_risk",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "12. BoxRisk≤0：\n\n```text\nNO_ENTRY_BOX_RISK_NOT_POSITIVE\nWAIT_RETEST\n```",
+      "binding_id": "B-REV2-12",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long.py::test_structural_gate_rejects_nonpositive_risk"
+      ]
+    },
+    {
+      "requirement_id": "REV2-13",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 13,
+      "source_text_verbatim": "13. Breakout Close 不得取代 BoxHigh 作 Stage A structural gate。\n\n使用者原測試敘述：\n\n> BoxHigh risk >5%，但 breakout Close risk <5%\n\n在正價格、`Close > BoxHigh`、相同 stop 下數學上不可能成立，因為：\n\n```text\nRisk(P) = 1 - Stop/P\n```\n\n會隨 `P` 增加而增加。\n\n因此此 fixture 改為兩項有效測試：\n\n- Stage A 明確只讀 BoxHigh，不讀 Close\n- 驗證 monotonic invariant：\n\n```text\nClose > BoxHigh\n=> Risk(Close) > Risk(BoxHigh)\n```\n\n這不改變使用者規則，只移除無法成立的測試資料。\n\n### WAIT_RETEST",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_stage_a_is_close_independent_and_risk_monotonic",
+      "test_name": "test_revision3_stage_a_is_close_independent_and_risk_monotonic",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "13. Breakout Close 不得取代 BoxHigh 作 Stage A structural gate。\n\n使用者原測試敘述：\n\n> BoxHigh risk >5%，但 breakout Close risk <5%\n\n在正價格、`Close > BoxHigh`、相同 stop 下數學上不可能成立，因為：\n\n```text\nRisk(P) = 1 - Stop/P\n```\n\n會隨 `P` 增加而增加。\n\n因此此 fixture 改為兩項有效測試：\n\n- Stage A 明確只讀 BoxHigh，不讀 Close\n- 驗證 monotonic invariant：\n\n```text\nClose > BoxHigh\n=> Risk(Close) > Risk(BoxHigh)\n```\n\n這不改變使用者規則，只移除無法成立的測試資料。\n\n### WAIT_RETEST",
+      "binding_id": "B-REV2-13",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_stage_a_is_close_independent_and_risk_monotonic"
+      ]
+    },
+    {
+      "requirement_id": "REV2-14",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 14,
+      "source_text_verbatim": "14. WAIT_RETEST 超過20 sessions且沒有結構失效：\n\n```text\n仍為 WAIT_RETEST\n```",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_wait_retest_has_no_timeout_even_after_sixty_sessions",
+      "test_name": "test_revision3_wait_retest_has_no_timeout_even_after_sixty_sessions",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "14. WAIT_RETEST 超過20 sessions且沒有結構失效：\n\n```text\n仍為 WAIT_RETEST\n```",
+      "binding_id": "B-REV2-14",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_wait_retest_has_no_timeout_even_after_sixty_sessions"
+      ]
+    },
+    {
+      "requirement_id": "REV2-15",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 15,
+      "source_text_verbatim": "15. WAIT_RETEST 遇 valid retest：\n\n```text\nRETEST_CONFIRMED\n```\n\n即使 `Close<=BoxHigh`，仍依 frozen precedence 優先處理 retest。",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_wait_retest_valid_retest_has_priority_over_failed_breakout",
+      "test_name": "test_revision3_wait_retest_valid_retest_has_priority_over_failed_breakout",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "15. WAIT_RETEST 遇 valid retest：\n\n```text\nRETEST_CONFIRMED\n```\n\n即使 `Close<=BoxHigh`，仍依 frozen precedence 優先處理 retest。",
+      "binding_id": "B-REV2-15",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_wait_retest_valid_retest_has_priority_over_failed_breakout"
+      ]
+    },
+    {
+      "requirement_id": "REV2-16",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 16,
+      "source_text_verbatim": "16. WAIT_RETEST 遇非retest且 `Close<=BoxHigh`：\n\n```text\nFAILED_BOX_BREAKOUT\nBOX_REACTIVATED\n```",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_wait_retest_non_retest_close_reactivates_same_box",
+      "test_name": "test_revision3_wait_retest_non_retest_close_reactivates_same_box",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "16. WAIT_RETEST 遇非retest且 `Close<=BoxHigh`：\n\n```text\nFAILED_BOX_BREAKOUT\nBOX_REACTIVATED\n```",
+      "binding_id": "B-REV2-16",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_wait_retest_non_retest_close_reactivates_same_box"
+      ]
+    },
+    {
+      "requirement_id": "REV2-17",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 17,
+      "source_text_verbatim": "17. Failed breakout 後下一次突破取得新 attempt ID。",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_failed_breakout_next_attempt_gets_new_id",
+      "test_name": "test_revision3_failed_breakout_next_attempt_gets_new_id",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "17. Failed breakout 後下一次突破取得新 attempt ID。",
+      "binding_id": "B-REV2-17",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_failed_breakout_next_attempt_gets_new_id"
+      ]
+    },
+    {
+      "requirement_id": "REV2-18",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 18,
+      "source_text_verbatim": "18. WAIT_RETEST 遇 `Close<BoxLow`：\n\n```text\nBEAR_BOX_BREAK\nBOX_INVALIDATED\n```",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_wait_retest_close_below_box_low_invalidates",
+      "test_name": "test_revision3_wait_retest_close_below_box_low_invalidates",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "18. WAIT_RETEST 遇 `Close<BoxLow`：\n\n```text\nBEAR_BOX_BREAK\nBOX_INVALIDATED\n```",
+      "binding_id": "B-REV2-18",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_wait_retest_close_below_box_low_invalidates"
+      ]
+    },
+    {
+      "requirement_id": "REV2-19",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 19,
+      "source_text_verbatim": "19. WAIT_RETEST 出現全部為 breakout 後形成的全新 entanglement：\n\n```text\n舊 box invalidated\n新 box ID建立\n```",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_new_box_requires_invalidation_and_four_fresh_bars",
+      "test_name": "test_revision3_new_box_requires_invalidation_and_four_fresh_bars",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "19. WAIT_RETEST 出現全部為 breakout 後形成的全新 entanglement：\n\n```text\n舊 box invalidated\n新 box ID建立\n```",
+      "binding_id": "B-REV2-19",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_new_box_requires_invalidation_and_four_fresh_bars"
+      ]
+    },
+    {
+      "requirement_id": "REV2-20",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 20,
+      "source_text_verbatim": "20. 沒有任何時間型 expiry reason code。",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_removes_unreachable_wait_retest_supersession_path",
+      "test_name": "test_revision3_removes_unreachable_wait_retest_supersession_path",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "20. 沒有任何時間型 expiry reason code。",
+      "binding_id": "B-REV2-20",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_removes_unreachable_wait_retest_supersession_path"
+      ]
+    },
+    {
+      "requirement_id": "REV2-21",
+      "source_spec": "REVISION_2_AMENDMENT",
+      "source_section": "## 3. 受影響的 Tests",
+      "source_test_number": 21,
+      "source_text_verbatim": "21. Study end前一直有效但未成交的 WAIT_RETEST：\n\n```text\nSTUDY_END_UNFILLED\n```\n\n---",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_study_end_unfilled_attempt_is_a_terminal_audit_event",
+      "test_name": "test_revision3_study_end_unfilled_attempt_is_a_terminal_audit_event",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "21. Study end前一直有效但未成交的 WAIT_RETEST：\n\n```text\nSTUDY_END_UNFILLED\n```\n\n---",
+      "binding_id": "B-REV2-21",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_study_end_unfilled_attempt_is_a_terminal_audit_event"
+      ]
+    },
+    {
+      "requirement_id": "REV3-01",
+      "source_spec": "REVISION_3_AMENDMENT",
+      "source_section": "REVISION 3 TEST MATRIX",
+      "source_test_number": 1,
+      "source_text_verbatim": "equity ledger correctness",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_daily_bh_ledger_changes_with_close_and_final_row_is_flat",
+      "test_name": "test_daily_bh_ledger_changes_with_close_and_final_row_is_flat",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "equity ledger correctness",
+      "binding_id": "B-REV3-01",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_daily_bh_ledger_changes_with_close_and_final_row_is_flat"
+      ]
+    },
+    {
+      "requirement_id": "REV3-02",
+      "source_spec": "REVISION_3_AMENDMENT",
+      "source_section": "REVISION 3 TEST MATRIX",
+      "source_test_number": 2,
+      "source_text_verbatim": "nonzero MDD",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_initial_capital_anchor_produces_nonzero_mdd_and_dates",
+      "test_name": "test_initial_capital_anchor_produces_nonzero_mdd_and_dates",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "nonzero MDD",
+      "binding_id": "B-REV3-02",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_initial_capital_anchor_produces_nonzero_mdd_and_dates"
+      ]
+    },
+    {
+      "requirement_id": "REV3-03",
+      "source_spec": "REVISION_3_AMENDMENT",
+      "source_section": "REVISION 3 TEST MATRIX",
+      "source_test_number": 3,
+      "source_text_verbatim": "WAIT_RETEST no supersession",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_removes_unreachable_wait_retest_supersession_path",
+      "test_name": "test_revision3_removes_unreachable_wait_retest_supersession_path",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "WAIT_RETEST no supersession",
+      "binding_id": "B-REV3-03",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_removes_unreachable_wait_retest_supersession_path"
+      ]
+    },
+    {
+      "requirement_id": "REV3-04",
+      "source_spec": "REVISION_3_AMENDMENT",
+      "source_section": "REVISION 3 TEST MATRIX",
+      "source_test_number": 4,
+      "source_text_verbatim": "new box only after invalidation",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_wait_retest_valid_retest_has_priority_over_failed_breakout",
+      "test_name": "test_revision3_wait_retest_valid_retest_has_priority_over_failed_breakout",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "new box only after invalidation",
+      "binding_id": "B-REV3-04",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_wait_retest_valid_retest_has_priority_over_failed_breakout"
+      ]
+    },
+    {
+      "requirement_id": "REV3-05",
+      "source_spec": "REVISION_3_AMENDMENT",
+      "source_section": "REVISION 3 TEST MATRIX",
+      "source_test_number": 5,
+      "source_text_verbatim": "full artifact hash",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_revision3_new_box_requires_invalidation_and_four_fresh_bars",
+      "test_name": "test_revision3_new_box_requires_invalidation_and_four_fresh_bars",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "full artifact hash",
+      "binding_id": "B-REV3-05",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_revision3_new_box_requires_invalidation_and_four_fresh_bars"
+      ]
+    },
+    {
+      "requirement_id": "REV3-06",
+      "source_spec": "REVISION_3_AMENDMENT",
+      "source_section": "REVISION 3 TEST MATRIX",
+      "source_test_number": 6,
+      "source_text_verbatim": "local-summary radii",
+      "test_file": "backend/tests/test_ma_box_traceability.py",
+      "test_function": "test_revision3_traceability_verifies_authoritative_source_fingerprints_and_verbatim_sections",
+      "test_name": "test_revision3_traceability_verifies_authoritative_source_fingerprints_and_verbatim_sections",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "local-summary radii",
+      "binding_id": "B-REV3-06",
+      "bound_tests": [
+        "backend/tests/test_ma_box_traceability.py::test_revision3_traceability_verifies_authoritative_source_fingerprints_and_verbatim_sections"
+      ]
+    },
+    {
+      "requirement_id": "REV3-07",
+      "source_spec": "REVISION_3_AMENDMENT",
+      "source_section": "REVISION 3 TEST MATRIX",
+      "source_test_number": 7,
+      "source_text_verbatim": "stepwise chart boundary",
+      "test_file": "backend/tests/test_ma_box_traceability.py",
+      "test_function": "test_revision3_traceability_has_truthful_source_matrix_and_independent_bindings",
+      "test_name": "test_revision3_traceability_has_truthful_source_matrix_and_independent_bindings",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "stepwise chart boundary",
+      "binding_id": "B-REV3-07",
+      "bound_tests": [
+        "backend/tests/test_ma_box_traceability.py::test_revision3_traceability_has_truthful_source_matrix_and_independent_bindings"
+      ]
+    },
+    {
+      "requirement_id": "REV3-08",
+      "source_spec": "REVISION_3_AMENDMENT",
+      "source_section": "REVISION 3 TEST MATRIX",
+      "source_test_number": 8,
+      "source_text_verbatim": "period-state isolation",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_local_robustness_reports_each_radius_and_unavailable_status",
+      "test_name": "test_local_robustness_reports_each_radius_and_unavailable_status",
+      "coverage_status": "DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "period-state isolation",
+      "binding_id": "B-REV3-08",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_local_robustness_reports_each_radius_and_unavailable_status"
+      ]
+    },
+    {
+      "requirement_id": "REV3-09",
+      "source_spec": "REVISION_3_AMENDMENT",
+      "source_section": "REVISION 3 TEST MATRIX",
+      "source_test_number": 9,
+      "source_text_verbatim": "exact counterfactual object parity。",
+      "test_file": "backend/tests/test_ma_box_long_revision3.py",
+      "test_function": "test_box_data_contains_causal_stepwise_boundary_values",
+      "test_name": "test_box_data_contains_causal_stepwise_boundary_values",
+      "coverage_status": "COMBINED_DIRECT",
+      "verification_kind": "EXECUTION_BEHAVIOR",
+      "assertion_summary": "exact counterfactual object parity。",
+      "binding_id": "B-REV3-09",
+      "bound_tests": [
+        "backend/tests/test_ma_box_long_revision3.py::test_box_data_contains_causal_stepwise_boundary_values",
+        "frontend/tests/ma-box.test.mjs::MA_BOX boundary renderer is causal and stepwise",
+        "frontend/tests/ma-box.test.mjs::MA_BOX zoom, reset, focus and horizontal-pan contracts are deterministic"
+      ]
+    }
+  ]
+}

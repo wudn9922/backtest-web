@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "gate": "G0",
+  "result": "PASS_PENDING_G1_REVIEW",
+  "abandoned_c1_backup": {
+    "patch_path": "backups/abandoned-gcp-c1.patch",
+    "patch_bytes": 8718,
+    "patch_sha256": "57f0d5e2ebcda997034a55d5867aabc5a0439e525162313e88ff5ea44e7516ec",
+    "untracked_archive_path": "backups/abandoned-gcp-c1-untracked.tar.gz",
+    "untracked_archive_bytes": 244970,
+    "untracked_archive_sha256": "51502beae046828bc8fff8244d3578e19d53bbbe5b2252e3283b9e3a75ef9649",
+    "replay": "PATCH_REPLAY_PASS",
+    "replay_file_hashes_verified": 51
+  },
+  "c1_removal": {
+    "tracked_files_restored": [
+      ".github/workflows/ci.yml",
+      ".gitignore",
+      "research/cloud/CLOUD_MIGRATION_POLICY.md"
+    ],
+    "c1_only_source_removed": true,
+    "ignored_c1_bytecode_removed": true,
+    "blind_git_clean_used": false,
+    "active_gcp_deployment_paths_remaining": false
+  },
+  "public_privacy": {
+    "mutable_metadata_sanitized": [
+      "research/cloud/GATE_C0_PRECHANGE_BASELINE.json"
+    ],
+    "frozen_exact_path_exceptions": {
+      "research/specs/MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt": "f01a50e304db4e654c57a0cfb560dc98ddc0a34aa478cd6248aa498f6434c69d",
+      "research/specs/MA_BREAKOUT_ANALYTICS_V1_REVISION_3.md": "0ac4a0fad9cbbc747b104b19e420e35368937e3359fd462786bd6317ad0d7647"
+    },
+    "public_candidate_scan": "PASS",
+    "negative_absolute_path_probe": "PASS",
+    "secret_scan": "PASS",
+    "historical_committed_blob_secret_scan": "PASS",
+    "large_file_scan": "PASS"
+  },
+  "frozen_specifications": {
+    "ma_box": "1edad0648095eb8261a79e6f9bf712f23a6dbb4db9271a1f0273ad7c79dbab0d",
+    "analytics_source_a": "f01a50e304db4e654c57a0cfb560dc98ddc0a34aa478cd6248aa498f6434c69d",
+    "analytics_source_b": "a1b80bfd9db2b4d6d1d252d050573eaf4bf40e535d698d2fee7fda38bf3b4448",
+    "analytics_combined": "0ac4a0fad9cbbc747b104b19e420e35368937e3359fd462786bd6317ad0d7647"
+  },
+  "canonical_hashes": {
+    "backend/app/backtest/execution.py": "6883ab436e4cc5bbf5c988aaa2ddb7fb5b3eddbb75ce91ee23ce384129a153ad",
+    "backend/app/backtest/portfolio.py": "244203e4bb000ac5c723e288ab6457e9b5e1bf39b3940629ed9d9abd525e5d4e",
+    "backend/app/backtest/indicators.py": "c7ba15b4c0c2a19e8880ef4827c170d8f64ffbcefd558464e5054157e38b2926",
+    "backend/app/backtest/engine.py": "070729788e573e57d2d50ff17c3ed73c7a7ca7d9c3ab3daa000d4e5edd34997f",
+    "backend/app/backtest/models.py": "0a88652416ddd272ecffc202358ba30f435bf7e8d83a5b53236abdf9308e98d1",
+    "backend/app/backtest/strategies/simple_ma_breakout.py": "396afef2a6cf70977aa9ab2f43bf417e17459bc7dd20260c94e5a4a8e0e8f59e",
+    "backend/app/backtest/strategies/advanced_ma_breakout.py": "bfd021e54b45b72ab4a679e83e494b924691b21f6abca05beb83786e56f6d7b8",
+    "backend/app/backtest/strategies/advanced_day1_stop.py": "a311dfc64abbbf37d3d1b4f30cc9b19879fe8e0f71c73c4c52853aeccbd4e737",
+    "backend/app/backtest/metrics.py": "70cc400f0af825649456872bba549e130ab6db93773b5878a83b4d97cfaafed5",
+    "backend/app/ma_box/engine.py": "4bf351516e97cc1cc3a72524af8e9aced6b79e76321371aaaa97268ea6b80a01"
+  },
+  "regression": {
+    "ma_box": {"passed": 99, "failed": 0, "skipped": 0, "xfail": 0, "deselected": 0, "warnings": 2},
+    "analytics_traceability": {"passed": 110, "failed": 0, "skipped": 0, "xfail": 0, "deselected": 0, "warnings": 2},
+    "legacy": {"passed": 246, "failed": 0, "skipped": 0, "xfail": 0, "deselected": 0, "warnings": 2},
+    "all_backend": {"passed": 455, "failed": 0, "skipped": 0, "xfail": 0, "deselected": 0, "warnings": 2},
+    "frontend": {"passed": 67, "failed": 0, "skipped": 0, "todo": 0, "warnings": 0},
+    "compileall": "PASS_SCOPED_SOURCE_ONLY",
+    "next_build": "PASS"
+  },
+  "public_candidate_simulation": {
+    "candidate_file_count": 298,
+    "privacy_scan": "PASS",
+    "frozen_hash_test": "PASS",
+    "scoped_compile": "PASS",
+    "ignored_local_data_included": false
+  },
+  "production_database_audit": {
+    "mode": "read_only",
+    "expected_counts_preserved": true,
+    "before_after": {
+      "backtests": 13842,
+      "position_audits": 110458,
+      "optimization_cache": 13741,
+      "ma_box_studies": 0,
+      "ma_box_runs": 0,
+      "ma_box_events": 0,
+      "ma_box_counterfactual_trades": 0,
+      "ma_breakout_analytics_studies": 0,
+      "ma_breakout_analytics_events": 0
+    }
+  },
+  "remote_mutation": false,
+  "ci_zero_cost_alignment": {
+    "runner": "ubuntu-24.04",
+    "dependency_cache": "disabled",
+    "public_candidate_scan": "required"
+  },
+  "public_history_requires_new_root": true,
+  "remaining_blockers": [
+    "G1 must create a sanitized orphan public root commit using the configured GitHub noreply identity; the local historical baseline remains unpublished."
+  ]
+}

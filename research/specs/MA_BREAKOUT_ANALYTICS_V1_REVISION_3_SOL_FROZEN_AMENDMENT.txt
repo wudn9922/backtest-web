@@ -1,0 +1,490 @@
+## 1. Revised Sideways definition
+
+`SIDEWAYS` 與 `ENTANGLEMENT` 正式拆開。
+
+Entanglement 繼續完全沿用 MA_BOX_LONG_V1 Rev3 causal box semantics，但只用於 cohort filter：
+
+```text
+ALL
+EXCLUDE_ENTANGLED
+ONLY_ENTANGLED
+SPLIT_ENTANGLED_CLEAN
+```
+
+Sideways 改為獨立的 causal price-consolidation rule，不要求：
+
+- K線穿越 MA
+- Close 在 MA 兩側切換
+- 價格靠近 MA
+- MA_BOX formation成立
+
+對 Day2 failure event，從 D3 起收集 completed follow-up bars。令候選窗口結束日為 `u`：
+
+```text
+Window(u) = 最近4根 completed follow-up bars
+```
+
+四根必須全部晚於 D2，不得混入 D1、D2或更早 bars。
+
+```text
+WindowRange
+= max(High in Window)
+- min(Low in Window)
+
+SidewaysATR
+= Wilder ATR14(
+    Window第一根之前的completed session
+  )
+
+NormalizedRange
+= WindowRange / SidewaysATR
+```
+
+若：
+
+```text
+NormalizedRange <= 1.5
+```
+
+且同日沒有先成立：
+
+```text
+RETURN_TO_BEAR / RETURN_TO_BULL
+MA_RETEST_REBOUND / MA_RETEST_REJECTION
+TREND_CONTINUATION_AWAY
+```
+
+則：
+
+```text
+SIDEWAYS
+```
+
+ATR必須 finite 且 `>0`。無有效ATR時，該窗口不可評估，但event繼續等待後續窗口，不算failure或censor。
+
+四根是 minimum confirmation structure，不是maximum observation horizon。Day2 failure仍持續觀察至terminal outcome或study end。
+
+---
+
+## 2. Sideways parameter comparison and frozen choice
+
+### Window length
+
+| 候選 | 優點 | 主要問題 |
+|---|---|---|
+| 4 bars | 能辨識短而清楚的整理；較快形成causal判定；與日線人工觀察節奏一致 | 比5 bars稍容易出現短暫假整理 |
+| 5 bars | confirmation較強 | 容易把合理的短整理延後；期間可能先被其他terminal吸收 |
+
+Frozen：
+
+```text
+sideways_confirmation_bars = 4
+```
+
+### Range threshold
+
+| 門檻 | 判斷 |
+|---|---|
+| `<=1.0 ATR` | 對4日總High-Low過度嚴格，只保留極端壓縮 |
+| `<=1.5 ATR` | 能排除一般波動，同時保留肉眼可見的窄幅整理 |
+| `<=2.0 ATR` | 過度寬鬆，普通pullback或緩慢方向移動也可能被歸類Sideways |
+
+Frozen：
+
+```text
+sideways_max_range_atr = 1.5
+```
+
+邊界採 inclusive：
+
+```text
+NormalizedRange == 1.5
+=> SIDEWAYS eligible
+```
+
+### ATR reference
+
+不採：
+
+- 確認日ATR14：會讓同一窗口波動同時擴大分子與分母。
+- Day2固定ATR：無固定follow-up horizon時可能長期失真。
+- 窗口內平均ATR：會被正在分類的bars反向影響。
+
+Frozen：
+
+```text
+ATR snapshot
+= completed ATR14 immediately before each candidate window
+```
+
+每個rolling candidate window有自己的pre-window snapshot；窗口內不更新。
+
+---
+
+## 3. Revised Trend Continuation definition
+
+使用者提出的 Day1 Close progress rule正式接受。
+
+Long：
+
+```text
+Close(u) >= MA(u) × 1.002
+AND
+Close(u) > Close(D1)
+```
+
+Short：
+
+```text
+Close(u) <= MA(u) × 0.998
+AND
+Close(u) < Close(D1)
+```
+
+兩條都必須成立。
+
+選擇 Day1 Close，而不是 Day1 High/Low，原因：
+
+- Day1 breakout本身是completed-close event。
+- Day1 High/Low容易受單一wick影響。
+- 要求突破Day1 High/Low會把「延續」提高成「突破盤中極值」。
+- Distance-from-MA expansion可能因MA移動而成立，即使價格沒有真正前進。
+- Day1 Close條件簡單、causal、方向對稱，直接證明價格重新超越原突破收盤。
+
+僅維持在 `MA±0.2%` 不再足以構成Trend Continuation。
+
+### Revised terminal precedence
+
+每個D3以後completed session依序：
+
+1. `RETURN_TO_BEAR / RETURN_TO_BULL`
+2. `MA_RETEST_REBOUND / MA_RETEST_REJECTION`
+3. `TREND_CONTINUATION_AWAY`
+4. `SIDEWAYS`
+5. 否則繼續觀察
+
+Retest優先於Trend：同一根大範圍K線若先測試MA區域並收復，人工語意屬於回測反彈。
+
+Trend優先於Sideways：符合「Sideways只在尚未觸發Return、Retest、Trend Away時成立」。
+
+---
+
+## 4. Condition-aware target observation origins
+
+Reference Entry不變：
+
+```text
+Long:
+E = MA(D1-1) × 1.01
+
+Short:
+E = MA(D1-1) × 0.99
+```
+
+它仍是統計基準價，不是actual execution。
+
+### POST_D1 origin
+
+適用條件：
+
+```text
+BREAKOUT
+VOL_GE_10
+VOL_GE_20
+VOL_GE_30
+VOL_LT_10
+```
+
+因這些條件在D1 close後已知：
+
+```text
+observation_origin = POST_D1
+first_evaluable_session = D2 Open
+```
+
+Dynamic stop第一日：
+
+```text
+Long:  MA(D1) × 0.985
+Short: MA(D1) × 1.015
+```
+
+### POST_D2 origin
+
+適用條件：
+
+```text
+DAY2_SUCCESS
+DAY2_SUCCESS_AND_VOL_GE_10
+DAY2_SUCCESS_AND_VOL_GE_20
+DAY2_SUCCESS_AND_VOL_GE_30
+```
+
+因Day2 success在D2 completed close後才知道：
+
+```text
+observation_origin = POST_D2_SUCCESS
+first_evaluable_session = D3 Open
+```
+
+Dynamic stop第一日：
+
+```text
+Long:  MA(D2) × 0.985
+Short: MA(D2) × 1.015
+```
+
+Day2 intraday High、Low、Open不得參與POST_D2 target/stop判定。
+
+同一 event與target可以因此產生兩筆不同 outcome：
+
+```text
+POST_D1 outcome
+POST_D2_SUCCESS outcome
+```
+
+兩者不得互相覆寫或共用resolution date。
+
+若Day2 success成立但study沒有D3：
+
+```text
+eligible = true
+resolved = false
+RIGHT_CENSORED_NO_POST_CONDITION_SESSION
+```
+
+---
+
+## 5. 受影響 event schema
+
+Day1 event新增或明確化：
+
+```text
+day1_close_reference_for_trend
+trend_clear_side_met
+trend_new_advance_met
+trend_confirmation_date
+```
+
+Sideways欄位：
+
+```text
+sideways_confirmation_bars = 4
+sideways_window_start
+sideways_window_end
+sideways_window_dates
+sideways_window_high
+sideways_window_low
+sideways_range
+sideways_atr_reference_date
+sideways_atr14_snapshot
+sideways_range_atr
+sideways_threshold_atr = 1.5
+sideways_confirmation_date
+```
+
+Entanglement欄位保留，但不得作為sideways判定來源：
+
+```text
+entanglement_status
+box_active_at_session_start
+box_formed_on_day1_close
+box_active_after_day1_close
+```
+
+Target outcome schema必須新增：
+
+```text
+observation_origin:
+POST_D1
+POST_D2_SUCCESS
+
+condition_known_date
+observation_start_date
+observation_start_session
+first_dynamic_stop
+resolution_date
+resolution_state
+```
+
+Target outcome identity至少為：
+
+```text
+event_id
+target_type
+observation_origin
+```
+
+不得只以：
+
+```text
+event_id + target_type
+```
+
+作unique key。
+
+Failure outcome新增：
+
+```text
+terminal_precedence_revision
+sideways_definition_revision
+trend_definition_revision
+```
+
+---
+
+## 6. 受影響 aggregate schema
+
+Aggregate key新增：
+
+```text
+observation_origin
+```
+
+Target aggregate不得混合：
+
+```text
+POST_D1
+POST_D2_SUCCESS
+```
+
+正式對應：
+
+| Condition | Required origin |
+|---|---|
+| Breakout | POST_D1 |
+| Vol≥10/20/30 | POST_D1 |
+| Day2 success | POST_D2_SUCCESS |
+| Day2 success + Vol≥10/20/30 | POST_D2_SUCCESS |
+
+每個aggregate繼續保存：
+
+```text
+eligible_count
+resolved_count
+success_count
+censored_count
+not_evaluable_count
+probability
+Wilson CI
+event membership
+```
+
+Failure-path aggregate維持互斥分類，但更新precedence：
+
+```text
+Return
+Retest
+Trend
+Sideways
+Right-censored
+```
+
+前三個使用者關心的合計仍為：
+
+```text
+Retest
++ Return
++ Sideways
+```
+
+它們仍互斥，但不再代表terminal precedence順序。
+
+Sideways aggregate另保存：
+
+```text
+window_bars = 4
+range_atr_threshold = 1.5
+atr_reference_mode = PRE_WINDOW_COMPLETED_ATR14
+```
+
+---
+
+## 7. 受影響 test matrix
+
+原有測試中以下項目必須修改：
+
+- Test 33 `Sideways terminal`：改用獨立range compression，不得依賴MA crossing。
+- Test 34 `Trend terminal`：必須同時驗證clear side及突破Day1 Close。
+- Test 36 `Terminal mutually exclusive`：使用新precedence。
+- Tests 39–41：volume-conditioned failure outcomes套用新Sideways與Trend規則。
+- Test 43只驗證entanglement cohort，不再兼任Sideways測試。
+- Test 64改為`Trend優先於Sideways`。
+- 舊「Sideways使用VisualBoxObserver」測試刪除或改為cohort-only測試。
+
+新增direct tests：
+
+1. 四根completed follow-up bars才可Sideways。
+2. 三根不得確認Sideways。
+3. 五根不是必要條件；第四根已符合即可確認。
+4. 四根全部必須晚於D2。
+5. `range/ATR == 1.5`成立。
+6. `range/ATR >1.5`不成立。
+7. 使用window前一completed session的Wilder ATR14。
+8. Window內ATR變化不得修改該window denominator。
+9. Invalid pre-window ATR令該window不可評估，但observer繼續。
+10. 價格全在MA上方仍可Sideways。
+11. 價格全在MA下方仍可Sideways。
+12. Sideways不要求K線穿MA。
+13. `ENTANGLED=true、SIDEWAYS=false`可成立。
+14. `ENTANGLED=false、SIDEWAYS=true`可成立。
+15. Long僅clear above但`Close<=Close(D1)`不得Trend。
+16. Long `Close>Close(D1)`但未clear above不得Trend。
+17. Long兩條同時成立才Trend。
+18. Long `Close==Close(D1)`不得Trend。
+19. Short僅clear below但`Close>=Close(D1)`不得Trend。
+20. Short兩條同時成立才Trend。
+21. Day1 High/Low不參與Trend gate。
+22. 同日Retest及Trend成立時選Retest。
+23. 同日Trend及Sideways成立時選Trend。
+24. POST_D1 Breakout target從D2 Open開始。
+25. Volume-conditioned target從D2 Open開始。
+26. POST_D2_SUCCESS target從D3 Open開始。
+27. Day2+Volume target從D3 Open開始。
+28. D2 intraday target hit不得回填POST_D2_SUCCESS outcome。
+29. D2 intraday stop hit不得回填POST_D2_SUCCESS outcome。
+30. 相同D2 hit可正常影響POST_D1 outcome。
+31. POST_D2 long首個stop使用`MA(D2)×0.985`。
+32. POST_D2 short首個stop使用`MA(D2)×1.015`。
+33. 同一event/target可保存兩個observation origins。
+34. POST_D1與POST_D2 aggregates不可混線。
+35. Day2 success但無D3時right-censored，不算failure。
+36. 無fixed Sideways timeout。
+37. 無fixed Day2-failure observation timeout。
+38. Entanglement cohort結果不受Sideways規則修改。
+
+---
+
+## 8. 是否仍有 ambiguity
+
+沒有會改變分析結果的remaining ambiguity。
+
+Frozen amendments：
+
+```text
+SIDEWAYS:
+4 completed post-D2 bars
+range <= 1.5 × pre-window completed Wilder ATR14
+no MA-cross requirement
+
+TREND CONTINUATION LONG:
+Close >= MA×1.002
+AND Close > Close(D1)
+
+TREND CONTINUATION SHORT:
+Close <= MA×0.998
+AND Close < Close(D1)
+
+POST_D1 targets:
+start D2 Open
+
+POST_D2_SUCCESS targets:
+start D3 Open
+
+Terminal precedence:
+Return → Retest → Trend → Sideways
+```
+
+MA_BREAKOUT_ANALYTICS_V1 SPEC AMENDMENT ACCEPTED
+
+MA_BREAKOUT_ANALYTICS_V1 SPEC FROZEN REVISION 3

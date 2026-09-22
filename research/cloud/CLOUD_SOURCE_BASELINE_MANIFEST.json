@@ -1,0 +1,207 @@
+{
+  "backend_python_identity": {
+    "ci_python_version": "3.12",
+    "dependency_manifest": {
+      "bytes": 186,
+      "path": "backend/requirements.txt",
+      "sha256": "3cbe6ad7ffdb7cfad8bdbf2977b0c63f5ae688b7a5a79f7b561670e558d3c7a2"
+    },
+    "note": "Current requirements are compatibility ranges; CI installs from the manifest. This C0 record does not alter runtime dependency semantics.",
+    "python_version_tested_locally": "3.12.14"
+  },
+  "canonical_file_hashes": {
+    "app/backtest/engine.py": {
+      "bytes": 15922,
+      "path": "backend/app/backtest/engine.py",
+      "sha256": "070729788e573e57d2d50ff17c3ed73c7a7ca7d9c3ab3daa000d4e5edd34997f"
+    },
+    "app/backtest/execution.py": {
+      "bytes": 5358,
+      "path": "backend/app/backtest/execution.py",
+      "sha256": "6883ab436e4cc5bbf5c988aaa2ddb7fb5b3eddbb75ce91ee23ce384129a153ad"
+    },
+    "app/backtest/indicators.py": {
+      "bytes": 1540,
+      "path": "backend/app/backtest/indicators.py",
+      "sha256": "c7ba15b4c0c2a19e8880ef4827c170d8f64ffbcefd558464e5054157e38b2926"
+    },
+    "app/backtest/metrics.py": {
+      "bytes": 3846,
+      "path": "backend/app/backtest/metrics.py",
+      "sha256": "70cc400f0af825649456872bba549e130ab6db93773b5878a83b4d97cfaafed5"
+    },
+    "app/backtest/models.py": {
+      "bytes": 5618,
+      "path": "backend/app/backtest/models.py",
+      "sha256": "0a88652416ddd272ecffc202358ba30f435bf7e8d83a5b53236abdf9308e98d1"
+    },
+    "app/backtest/portfolio.py": {
+      "bytes": 2741,
+      "path": "backend/app/backtest/portfolio.py",
+      "sha256": "244203e4bb000ac5c723e288ab6457e9b5e1bf39b3940629ed9d9abd525e5d4e"
+    },
+    "app/backtest/strategies/advanced_day1_stop.py": {
+      "bytes": 2050,
+      "path": "backend/app/backtest/strategies/advanced_day1_stop.py",
+      "sha256": "a311dfc64abbbf37d3d1b4f30cc9b19879fe8e0f71c73c4c52853aeccbd4e737"
+    },
+    "app/backtest/strategies/advanced_ma_breakout.py": {
+      "bytes": 22355,
+      "path": "backend/app/backtest/strategies/advanced_ma_breakout.py",
+      "sha256": "bfd021e54b45b72ab4a679e83e494b924691b21f6abca05beb83786e56f6d7b8"
+    },
+    "app/backtest/strategies/simple_ma_breakout.py": {
+      "bytes": 5140,
+      "path": "backend/app/backtest/strategies/simple_ma_breakout.py",
+      "sha256": "396afef2a6cf70977aa9ab2f43bf417e17459bc7dd20260c94e5a4a8e0e8f59e"
+    },
+    "app/ma_box/engine.py": {
+      "bytes": 71283,
+      "path": "backend/app/ma_box/engine.py",
+      "sha256": "4bf351516e97cc1cc3a72524af8e9aced6b79e76321371aaaa97268ea6b80a01"
+    }
+  },
+  "captured_at": "2026-09-20T23:54:32+08:00",
+  "deployment_state": "No cloud resources or remote repository were created by Gate C0.",
+  "expected_production_database_rows_audit_only": {
+    "backtests": {
+      "rows": 13842,
+      "table_present": true
+    },
+    "ma_box_counterfactual_trades": {
+      "rows": 0,
+      "table_present": true
+    },
+    "ma_box_events": {
+      "rows": 0,
+      "table_present": true
+    },
+    "ma_box_runs": {
+      "rows": 0,
+      "table_present": true
+    },
+    "ma_box_studies": {
+      "rows": 0,
+      "table_present": true
+    },
+    "ma_breakout_analytics_events": {
+      "rows": 0,
+      "table_present": true
+    },
+    "ma_breakout_analytics_studies": {
+      "rows": 0,
+      "table_present": true
+    },
+    "optimization_cache": {
+      "rows": 13741,
+      "table_present": true
+    },
+    "position_audits": {
+      "rows": 110458,
+      "table_present": true
+    }
+  },
+  "frontend_package_identity": {
+    "lockfile": {
+      "bytes": 51141,
+      "path": "frontend/pnpm-lock.yaml",
+      "sha256": "24001d48a28027098210457d9f8a0f197002e9066c0d47a4be973cc815981111"
+    },
+    "name": "backtest-lab-frontend",
+    "next_version_resolved_by_lockfile": "15.5.25",
+    "node_version_tested_locally": "v24.18.0",
+    "package_json": {
+      "bytes": 933,
+      "path": "frontend/package.json",
+      "sha256": "8f8fcd07a54f40d59c4dc7ef64503d3fe1e5ce2c104651a6b791d2d17fcec117"
+    },
+    "pnpm_version_tested_locally": "11.19.0",
+    "version": "0.1.0"
+  },
+  "frozen_spec_fingerprints": {
+    "analytics_combined": {
+      "bytes": 31318,
+      "path": "research/specs/MA_BREAKOUT_ANALYTICS_V1_REVISION_3.md",
+      "sha256": "0ac4a0fad9cbbc747b104b19e420e35368937e3359fd462786bd6317ad0d7647"
+    },
+    "analytics_source_a": {
+      "bytes": 21855,
+      "path": "research/specs/MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "sha256": "f01a50e304db4e654c57a0cfb560dc98ddc0a34aa478cd6248aa498f6434c69d"
+    },
+    "analytics_source_b": {
+      "bytes": 10759,
+      "path": "research/specs/MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "sha256": "a1b80bfd9db2b4d6d1d252d050573eaf4bf40e535d698d2fee7fda38bf3b4448"
+    },
+    "ma_box_spec": {
+      "bytes": 60025,
+      "path": "research/specs/MA_BOX_LONG_V1_REVISION_3.md",
+      "sha256": "1edad0648095eb8261a79e6f9bf712f23a6dbb4db9271a1f0273ad7c79dbab0d"
+    }
+  },
+  "key_docker_identity": {
+    "backend/Dockerfile": {
+      "bytes": 324,
+      "path": "backend/Dockerfile",
+      "sha256": "ce6c567ef75a2a82e98d2b428fe19f01c1733027c918a8c07ffd31910464eeae"
+    },
+    "docker-compose.prod.yml": {
+      "bytes": 2256,
+      "path": "docker-compose.prod.yml",
+      "sha256": "ff24c4a546c47cef5bd6491c320007cf40f42cee87f3198001e514208b47798e"
+    },
+    "docker-compose.yml": {
+      "bytes": 2029,
+      "path": "docker-compose.yml",
+      "sha256": "e0b76a12c4282c73c02dc6fa793b151e0d168f0e2116ed996080b3852f29ad0c"
+    },
+    "frontend/Dockerfile": {
+      "bytes": 675,
+      "path": "frontend/Dockerfile",
+      "sha256": "ca5fc8841e7460abc384d4934fd3f68a8b3a33331f3e7c77a9a8ba5e3cc3a4d2"
+    }
+  },
+  "manifest_type": "GATE_C0_SOURCE_BASELINE",
+  "prechange_tree_manifest": {
+    "baseline_artifact": "research/cloud/GATE_C0_PRECHANGE_BASELINE.json",
+    "canonical_json_sha256": "bcb90050a0cddb351b913019839796a0a1acc906bbe809e3b9a88d0aac428c62",
+    "file_count": 280
+  },
+  "project_version_state": {
+    "backend_version": "not separately versioned in the current local application",
+    "frontend_version": "0.1.0",
+    "git_branch": "main",
+    "initial_commit_sha": "not duplicated in the manifest to avoid self-reference; inspect Git HEAD and the Gate C0 report",
+    "remote": "not configured; user GitHub authentication/authorization not present"
+  },
+  "schema_version": 1,
+  "traceability_counts": {
+    "ma_box_long_v1_rev3": {
+      "coverage": {
+        "COMBINED_DIRECT": 2,
+        "DIRECT": 75
+      },
+      "source_matrix_counts": {
+        "MASTER_SPEC": 47,
+        "REVISION_2_AMENDMENT": 21,
+        "REVISION_3_AMENDMENT": 9
+      },
+      "source_requirements": 77
+    },
+    "ma_breakout_analytics_v1_rev3": {
+      "active_coverage_counts": {
+        "COMBINED_DIRECT": 11,
+        "DIRECT": 105,
+        "MISSING": 0
+      },
+      "active_requirements": 116,
+      "source_requirements": 117,
+      "status_counts": {
+        "ACTIVE": 116,
+        "SUPERSEDED_BY_REV3": 1
+      },
+      "superseded_requirements": 1
+    }
+  }
+}

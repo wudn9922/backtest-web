@@ -1,0 +1,89 @@
+{
+  "version": "MA_STRUCTURE_V1",
+  "algorithm_id": "MA_STRUCTURE_V1",
+  "description": "Deterministic numerical OHLC moving-average structure analyzer.",
+  "ma_reference": "previous_trading_day_ma",
+  "equality": {
+    "side": "carry_previous_non_neutral_side_else_neutral",
+    "bull_retest": "close_equal_reference_is_fail",
+    "bear_retest": "close_equal_reference_is_fail",
+    "bull_invalidation": "strict_close_below_reference",
+    "bear_invalidation": "strict_close_above_reference",
+    "day2": "strict_close_breakout_extreme"
+  },
+  "regime": {
+    "states": ["NO_SIDE", "INHERITED_ABOVE_NO_SCORE", "INHERITED_BELOW_NO_SCORE", "ACTIVE_ABOVE", "ACTIVE_BELOW"],
+    "success": {"bull": "return_gt_zero", "bear": "return_lt_zero"},
+    "raw_formula": "(bull_rate_or_zero + bear_rate_or_zero) / 2"
+  },
+  "retest": {
+    "bull_condition": "previous_close_gt_previous_previous_ma_and_low_le_reference",
+    "bear_condition": "previous_close_lt_previous_previous_ma_and_high_ge_reference",
+    "pool_directions": true,
+    "component": "wilson_95_lower_pooled"
+  },
+  "breakout": {
+    "bull_trigger_multiplier": 1.01,
+    "bull_target_multiplier": 1.03,
+    "bear_trigger_multiplier": 0.99,
+    "bear_target_multiplier": 0.97,
+    "success_precedes_same_day_invalidation": true,
+    "train_end_active": "unresolved",
+    "states": ["ARMED", "ACTIVE", "DISARMED"],
+    "rearm": "next_session_after_completed_close_invalidation"
+  },
+  "confirmation": {
+    "d2": "next_actual_train_session",
+    "bull_confirm": "close_gt_breakout_high",
+    "bear_confirm": "close_lt_breakout_low",
+    "bull_retest_touch": "low_le_reference",
+    "bear_retest_touch": "high_ge_reference",
+    "wait_starts": "session_after_d2",
+    "same_day_retest_violation": "sequence_ambiguous",
+    "component": "one_minus_violation_rate"
+  },
+  "denominators": {
+    "retest": "all_bull_plus_bear_retest_events",
+    "breakout": "resolved_bull_plus_bear_breakouts",
+    "confirmation": "confirmed_plus_retest_safe_plus_violation",
+    "execution_feasibility": "bull_breakout_events"
+  },
+  "boundary": {
+    "pre_roll": "state_only_no_score",
+    "train_end": "no_test_resolution",
+    "advanced_indicator_warmup": "does_not_delay_structure_observation"
+  },
+  "percentile": {
+    "method": "average_rank",
+    "formula": "(average_rank - 1) / (n - 1)",
+    "single_candidate": 0.5,
+    "all_equal": 0.5
+  },
+  "wilson": {
+    "confidence": 0.95,
+    "z": 1.959963984540054,
+    "continuity_correction": false,
+    "zero_events": 0.0
+  },
+  "composite": {
+    "components": ["regime", "retest", "breakout", "confirmation"],
+    "weights": [0.25, 0.25, 0.25, 0.25]
+  },
+  "tie_break": [
+    "higher_structure_score",
+    "higher_breakout_wilson_lower",
+    "more_total_resolved_structural_events",
+    "lower_confirmation_violation_rate_null_worst",
+    "smaller_ma_period",
+    "canonical_candidate_order"
+  ],
+  "execution_annotations": {
+    "bull_gap": "open_gt_structural_bull_base",
+    "bear_gap": "open_lt_structural_bear_base",
+    "bear_canonical_status": "NOT_APPLICABLE_BEAR",
+    "score_excluded": true
+  },
+  "event_namespace": "STRUCTURE",
+  "chart_source": "numerical_ohlc_events_only",
+  "spec_hash": "sha256_canonical_json"
+}

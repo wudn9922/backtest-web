@@ -1,0 +1,46 @@
+{
+  "bom": false,
+  "combined_artifact": {
+    "bytes": 31318,
+    "lines": 1489,
+    "path": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3.md",
+    "sha256": "0ac4a0fad9cbbc747b104b19e420e35368937e3359fd462786bd6317ad0d7647"
+  },
+  "encoding": "UTF-8",
+  "line_endings": "LF",
+  "non_authoritative_sources": [
+    {
+      "path": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_MASTER_SOURCE.txt",
+      "role": "EARLIER_REQUEST_PROMPT_NOT_A_FROZEN_SOL_OUTPUT"
+    },
+    {
+      "path": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_AMENDMENT.md",
+      "role": "AMENDMENT_REQUEST_PROMPT_NOT_A_FROZEN_SOL_OUTPUT"
+    }
+  ],
+  "source_identity_policy": "RAW_SOURCE_IDENTITY_AND_NORMALIZED_ARTIFACT_IDENTITY_ARE_DISTINCT",
+  "source_normalization": "UTF-8 strict; CRLF/CR to LF; preserve source EOF exactly",
+  "sources": {
+    "revision_2_master": {
+      "authority": "SOL_FROZEN_OUTPUT",
+      "normalized_bytes": 20862,
+      "normalized_eof_newline": false,
+      "normalized_sha256": "d5d08500af89fce61c33c9004af23f4656bb677be10462a32c8a26641eaf66ec",
+      "path": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "raw_bytes": 21855,
+      "raw_sha256": "f01a50e304db4e654c57a0cfb560dc98ddc0a34aa478cd6248aa498f6434c69d"
+    },
+    "revision_3_amendment": {
+      "authority": "SOL_FROZEN_OUTPUT",
+      "normalized_bytes": 10270,
+      "normalized_eof_newline": false,
+      "normalized_sha256": "80c913dd26cb0adef57e259a4660da48bb681406e0ec25cfa947ebebdae485f1",
+      "path": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "raw_bytes": 10759,
+      "raw_sha256": "a1b80bfd9db2b4d6d1d252d050573eaf4bf40e535d698d2fee7fda38bf3b4448"
+    }
+  },
+  "spec_revision": 3,
+  "strategy_revision": "MA_BREAKOUT_ANALYTICS_V1",
+  "trailing_newlines": 1
+}

@@ -1,0 +1,99 @@
+# Secrets and local environment files. Safe examples are intentionally tracked.
+.env
+.env.*
+!.env.example
+!.env.production.example
+!frontend/.env.example
+!backend/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+*.token
+**/credentials/
+**/*credentials*.json
+**/*service-account*.json
+**/*service_account*.json
+**/*service-account*
+**/*service_account*
+**/wrangler-secret*
+**/gcp-credentials*
+
+# Python environments, bytecode, test and type-checker output.
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+.venv-*/
+venv/
+backend/.windows-python/
+backend/.runtime/
+
+# Node dependencies and generated frontend output.
+node_modules/
+.next/
+out/
+dist/
+coverage/
+.turbo/
+frontend/.next/
+frontend/out/
+*.tsbuildinfo
+
+# IDE and operating-system noise.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local SQLite databases and every SQLite sidecar/journal form.
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite3-journal
+*.db-wal
+*.db-shm
+*.db-journal
+
+# Provider, market-data and research caches. There are no approved Parquet
+# source fixtures in this repository; any future fixture requires an explicit
+# path allowlist here and in the test/source inventory.
+/data/cache/
+/data/caches/
+**/provider-cache/
+**/research-cache/
+**/research-rates/
+*.parquet
+*.feather
+*.arrow
+
+# Local production data, backups and generated artifacts.
+/data/
+/reports/
+/exports/
+/downloads/
+/logs/
+/backups/
+/tmp/
+/temp/
+/.logs/
+/.runtime/
+research/_tmp_*
+backend/data/
+backend/cache/
+backend/reports/
+*.junit.xml
+*.prof
+*.dump

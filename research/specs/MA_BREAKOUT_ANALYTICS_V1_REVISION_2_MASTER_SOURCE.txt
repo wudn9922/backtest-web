@@ -1,0 +1,2223 @@
+【模型】
+
+模式：
+Sol High — MA_BREAKOUT_ANALYTICS_V1
+MASTER SPECIFICATION REVISION 2
+
+Gemini：
+不用
+
+Grok：
+不用
+
+==================================================
+IMPORTANT
+==================================================
+
+上一份 MA_BREAKOUT_ANALYTICS_V1 prompt
+尚未執行。
+
+本 prompt：
+
+完整取代上一份。
+
+不得同時沿用上一份中
+與本 Revision 2 衝突的：
+
+fixed horizon
+Day1 +1% breakout definition
+mutually-overlapping failure path logic。
+
+==================================================
+BACKGROUND
+==================================================
+
+Existing accepted strategy：
+
+MA_BOX_LONG_V1
+
+Strategy Spec Revision：
+3
+
+Authoritative Spec SHA-256：
+
+1edad0648095eb8261a79e6f9bf712f23a6dbb4db9271a1f0273ad7c79dbab0d
+
+MA_BOX_LONG_V1 已封版。
+
+==================================================
+HARD RULE
+==================================================
+
+本任務：
+
+不得修改 MA_BOX_LONG_V1 Rev3
+任何交易語意。
+
+新增獨立：
+
+MA_BREAKOUT_ANALYTICS_V1
+
+這是：
+
+EVENT STUDY
++
+CONDITIONAL PROBABILITY ANALYTICS
+
+不是新的正式交易策略。
+
+==================================================
+PRIMARY PURPOSE
+==================================================
+
+對使用者已選定的 SMA
+及 nearby periods，
+
+研究：
+
+1.
+二日法則成立機率
+
+2.
+二日法則成立後，
+以「前一天 MA +1%」
+作為標準 reference entry，
+在動態 MA stop 前
+達到 +3% / ATR targets 的機率
+
+3.
+突破時量增至少
++10% / +20% / +30%
+的機率
+
+4.
+各量增門檻成立時，
+從相同 reference entry
+在 dynamic stop 前
+達成 +3% / ATR target 的機率
+
+5.
+量增 + 二日法則
+共同成立的機率，
+以及共同成立後 target success probability
+
+6.
+突破後 Day2 不成立，
+之後最終進入：
+
+MA回測反彈
+重回空頭
+橫盤整理
+
+三種狀態合計的機率
+
+以及：
+
+不屬於上述三者、
+而是明確脫離 MA 繼續上漲
+的機率
+
+7.
+第6項再加入 volume expansion
+>=10 / >=20 / >=30
+條件分析
+
+8.
+可以：
+
+Long only
+
+Short only
+
+Long / Short split
+
+並可以：
+
+全部
+
+排除糾結
+
+只看糾結
+
+糾結 vs 非糾結 split。
+
+==================================================
+CRITICAL DISTINCTION
+==================================================
+
+必須嚴格區分：
+
+A.
+MA BREAKOUT SIGNAL
+
+與：
+
+B.
+ANALYTIC REFERENCE ENTRY
+
+這兩者不是同一個價格。
+
+==================================================
+DAY1 BREAKOUT SIGNAL
+==================================================
+
+Day1 不是：
+
+MA +1%。
+
+使用者人工定義：
+
+Day1 是：
+
+「肉眼可見的有效突破均線」
+
+大致接近：
+
+當日 MA 上方 +0.2%
+
+或：
+
+某個 ATR-normalized distance。
+
+因此：
+
+MA +1%
+不得作為 Day1 breakout threshold。
+
+==================================================
+DAY1 CANDIDATE DEFINITIONS
+==================================================
+
+Sol SPEC 必須比較至少：
+
+A.
+Percentage：
+
+Long：
+
+Close(t) >= MA(t) × 1.002
+
+Short：
+
+Close(t) <= MA(t) × 0.998
+
+--------------------------------------------------
+
+B.
+ATR normalized：
+
+Long：
+
+(Close(t) - MA(t)) / ATR14(t)
+>= k
+
+Short：
+
+(MA(t) - Close(t)) / ATR14(t)
+>= k
+
+至少討論合理：
+
+k candidates
+
+例如：
+
+0.05
+0.10
+0.15
+0.20 ATR
+
+但不要直接 implementation。
+
+--------------------------------------------------
+
+C.
+Hybrid：
+
+同時要求：
+
+minimum percentage distance
+
+以及：
+
+minimum ATR-normalized distance
+
+或：
+
+MAX / adaptive threshold。
+
+==================================================
+GOAL OF DAY1 DEFINITION
+==================================================
+
+目的不是：
+
+找最佳報酬 threshold。
+
+而是：
+
+盡量重現：
+
+「肉眼看起來已經真正突破 MA，
+而不是只差一點點穿過。」
+
+Sol 必須從：
+
+visual semantics
+scale invariance
+low/high volatility stocks
+gap days
+false tiny crosses
+
+比較。
+
+==================================================
+DAY1 MUST BE CLOSE-BASED
+==================================================
+
+V1 優先研究：
+
+completed Close
+相對 MA。
+
+不能只因：
+
+High 穿 MA
+
+就把 Day1
+當正式突破。
+
+若 Sol 認為需要：
+
+body / wick condition
+
+必須明確提出，
+不可自行加入。
+
+==================================================
+BREAKOUT CROSS REQUIREMENT
+==================================================
+
+Day1 必須是：
+
+「由另一側進入突破側」
+
+不能：
+
+已經連續10天
+在 MA 上方
+
+每天都算 breakout。
+
+Long candidate：
+
+prior armed state
+在 MA 下方或未正式突破
+
+之後首次滿足
+有效上破 threshold。
+
+Short mirror。
+
+==================================================
+EVENT RE-ARM
+==================================================
+
+Sol 必須 freeze：
+
+何時 breakout event
+可以重新 armed。
+
+優先考慮：
+
+價格 completed Close
+重新回到 MA 另一側
+
+後：
+
+下一次再次有效突破
+才算新事件。
+
+不得：
+
+同一 trend episode
+重複每天計數。
+
+==================================================
+REFERENCE ENTRY
+==================================================
+
+雖然 Day1 breakout
+大約只有：
+
++0.2% / ATR threshold，
+
+所有使用者要求的
+target analytics：
+
+統一從：
+
+ReferenceEntry =
+MA(Day1 - 1) × 1.01
+
+計算。
+
+Long：
+
+MA previous × 1.01
+
+Short：
+
+若支援 short mirror，
+Sol 必須 freeze
+合理對稱 reference entry。
+
+不得自行假設，
+需在 SPEC 中列出。
+
+==================================================
+IMPORTANT
+==================================================
+
+ReferenceEntry：
+
+是統計研究的標準化
+reference price。
+
+它不是：
+
+Day1 breakout definition。
+
+也不是：
+
+MA_BOX_LONG_V1
+實際 entry ledger。
+
+==================================================
+RETROSPECTIVE CONDITIONAL ANALYTICS
+==================================================
+
+例如：
+
+研究：
+
+「在後來確認 Day2 成立的事件中，
+如果以 Day1 的
+MA(Day1-1)×1.01
+作為 reference entry，
+在 dynamic stop 前
+達標的比例是多少？」
+
+這是一個：
+
+conditional retrospective event study。
+
+不得把結果標示成：
+
+live executable strategy PnL。
+
+==================================================
+1. TWO-DAY RULE
+==================================================
+
+先從 repo / frozen historical spec
+確認 authoritative
+Two-Day Rule。
+
+預期：
+
+Long：
+
+Close(D2) > Close(D1)
+
+Short：
+
+Close(D2) < Close(D1)
+
+但：
+
+implementation 前
+Sol 必須確認。
+
+==================================================
+TWO-DAY OUTPUT
+==================================================
+
+對所有 evaluable Day1 breakout：
+
+Long：
+
+P(
+Close(D2) > Close(D1)
+|
+Day1 valid MA breakout
+)
+
+Short mirror。
+
+輸出：
+
+success count
+
+evaluable count
+
+probability
+
+Wilson 95% CI。
+
+==================================================
+2. TARGET ANALYTICS AFTER DAY2 SUCCESS
+==================================================
+
+取消所有：
+
+1D
+2D
+3D
+5D
+10D
+20D
+
+target horizons。
+
+使用者不需要
+固定 observation horizon。
+
+==================================================
+TARGET TERMINATION
+==================================================
+
+每個 reference trade
+從 reference entry
+開始觀察。
+
+直到：
+
+A.
+Target hit
+
+或
+
+B.
+Dynamic MA stop hit
+
+誰先發生。
+
+因此：
+
+success probability：
+
+P(
+Target hit before Dynamic MA Stop
+|
+condition
+)
+
+==================================================
+TARGETS
+==================================================
+
+Percentage：
+
++3%
+
+ATR：
+
+0.5 ATR
+
+1.0 ATR
+
+1.5 ATR
+
+2.0 ATR
+
+3.0 ATR。
+
+==================================================
+ATR TARGET SNAPSHOT
+==================================================
+
+使用：
+
+Wilder ATR14。
+
+Sol 必須 freeze：
+
+ATR snapshot date。
+
+優先候選：
+
+Day1 completed ATR14
+
+因為：
+
+reference trade
+以 Day1 為起點。
+
+一旦 snapshot：
+
+target distance
+整筆 event 固定。
+
+不得：
+
+每天隨 ATR 改 target。
+
+==================================================
+LONG TARGETS
+==================================================
+
+ReferenceEntry = E
+
++3%：
+
+E × 1.03
+
+ATR：
+
+E + k × ATR14_snapshot。
+
+==================================================
+SHORT TARGETS
+==================================================
+
+若 short analytics啟用：
+
++3% equivalent profit：
+
+E × 0.97
+
+ATR：
+
+E - k × ATR14_snapshot。
+
+==================================================
+DYNAMIC MA STOP
+==================================================
+
++3%及ATR targets
+全部沒有固定 horizon。
+
+正式競爭事件：
+
+TARGET
+
+vs
+
+DYNAMIC MA STOP。
+
+Long 優先候選：
+
+canonical dynamic：
+
+MA(t-1) × 0.985
+
+因為 MA_BOX_LONG_V1
+已有 authoritative stop。
+
+但：
+
+這是 Analytics module，
+
+Sol 必須確認是否：
+
+直接 reuse canonical long stop
+
+以及 short mirror
+應如何定義。
+
+不得污染
+MA_BOX_LONG_V1。
+
+==================================================
+SAME-DAY TARGET VS STOP
+==================================================
+
+如果同一天：
+
+High 觸 target
+
+Low 觸 dynamic stop
+
+必須使用：
+
+authoritative OHLC Heuristic
+
+決定誰先。
+
+Green：
+
+O -> L -> H -> C
+
+Red：
+
+O -> H -> L -> C
+
+Short mirror同樣
+依 path 判斷。
+
+==================================================
+NO FIXED TARGET HORIZON
+==================================================
+
+不得重新加入：
+
+5D target probability
+
+10D target probability
+
+20D target probability。
+
+Target evaluation
+只被：
+
+target hit
+或 dynamic stop
+
+終止。
+
+==================================================
+RIGHT CENSORING
+==================================================
+
+如果 study end
+到來時：
+
+target未到
+
+stop也未到，
+
+標：
+
+RIGHT_CENSORED
+
+不能算：
+
+target failure。
+
+Probability denominator：
+
+只使用：
+
+target或stop
+結果已確定的 events。
+
+==================================================
+3. VOLUME EXPANSION
+==================================================
+
+定義：
+
+VolumeIncrease =
+Volume(Day1)
+/ Volume(Day1-1)
+- 1
+
+==================================================
+IMPORTANT — THRESHOLDS ARE NESTED
+==================================================
+
+使用者指定：
+
+至少 +10%
+
+至少 +20%
+
+至少 +30%。
+
+即：
+
+VOL_GE_10
+
+VolumeIncrease >= 0.10
+
+VOL_GE_20
+
+VolumeIncrease >= 0.20
+
+VOL_GE_30
+
+VolumeIncrease >= 0.30。
+
+==================================================
+NOT EXCLUSIVE BUCKETS
+==================================================
+
+絕對不能做成：
+
+10%-20%
+
+20%-30%
+
+30%+。
+
+例如：
+
+Volume +35%
+
+必須同時屬於：
+
+>=10%
+>=20%
+>=30%。
+
+==================================================
+VOLUME OUTPUT
+==================================================
+
+輸出：
+
+P(Vol >=10% | Breakout)
+
+P(Vol >=20% | Breakout)
+
+P(Vol >=30% | Breakout)
+
+各自：
+
+k
+n
+probability
+Wilson CI。
+
+==================================================
+INVALID VOLUME
+==================================================
+
+如果 previous day Volume：
+
+missing
+
+zero
+
+nonfinite
+
+則：
+
+VOLUME_NOT_EVALUABLE。
+
+不得放進 volume denominator。
+
+==================================================
+4. VOLUME -> TARGET
+==================================================
+
+分別：
+
+VOL_GE_10
+
+VOL_GE_20
+
+VOL_GE_30
+
+計：
+
+P(+3% before dynamic stop)
+
+P(+0.5ATR before stop)
+
+P(+1ATR before stop)
+
+P(+1.5ATR before stop)
+
+P(+2ATR before stop)
+
+P(+3ATR before stop)。
+
+==================================================
+5. TWO-DAY + VOLUME
+==================================================
+
+計：
+
+P(
+Day2 success
+AND
+Vol >=10%
+|
+Breakout
+)
+
+以及：
+
+>=20%
+>=30%。
+
+==================================================
+CONDITIONAL TARGETS
+==================================================
+
+另外分別計：
+
+P(Target before stop | Day2 success)
+
+P(Target before stop | Vol>=10)
+
+P(Target before stop | Vol>=20)
+
+P(Target before stop | Vol>=30)
+
+P(Target before stop | Day2 AND Vol>=10)
+
+P(Target before stop | Day2 AND Vol>=20)
+
+P(Target before stop | Day2 AND Vol>=30)。
+
+==================================================
+6. DAY2 FAILURE PATH
+==================================================
+
+Condition：
+
+Day1 valid MA breakout
+
+AND
+
+Day2 Rule FAIL。
+
+從：
+
+Day2 completed close
+之後
+
+開始 causal observation。
+
+==================================================
+NO FIXED FOLLOW-UP HORIZON
+==================================================
+
+不得使用：
+
+5D
+10D
+20D
+
+作 event follow-up horizon。
+
+持續觀察，
+直到出現第一個
+正式 terminal outcome。
+
+==================================================
+LONG FAILURE TERMINAL OUTCOMES
+==================================================
+
+對 Long breakout
+Day2 failure：
+
+最終必須分類到：
+
+A.
+MA_RETEST_REBOUND
+
+B.
+RETURN_TO_BEAR
+
+C.
+SIDEWAYS
+
+D.
+TREND_CONTINUATION_AWAY_FROM_MA
+
+以及必要的：
+
+RIGHT_CENSORED
+
+如果 study end
+仍無 terminal outcome。
+
+==================================================
+PRIMARY USER OUTPUT
+==================================================
+
+使用者最主要想知道：
+
+P(
+MA_RETEST_REBOUND
+OR
+RETURN_TO_BEAR
+OR
+SIDEWAYS
+|
+Day2 failure
+)
+
+==================================================
+IMPORTANT
+==================================================
+
+這三個是：
+
+「加在一起的機率」。
+
+因此 V1
+必須設計成：
+
+mutually exclusive
+first-terminal-outcome classification。
+
+不能：
+
+三個重疊 incidence
+直接相加造成 >100%。
+
+==================================================
+COMBINED PROBABILITY
+==================================================
+
+如果三個 terminal outcomes
+互斥：
+
+Combined probability：
+
+P(A)+P(B)+P(C)
+
+等價：
+
+count(A+B+C)
+/ evaluable events。
+
+UI 要直接顯示：
+
+「回測/轉空/橫盤 合計」
+
+並同時可展開：
+
+回測反彈
+
+重回空頭
+
+橫盤
+
+各自比例。
+
+==================================================
+TREND CONTINUATION
+==================================================
+
+如果：
+
+沒有出現：
+
+回測反彈
+轉空
+橫盤
+
+而價格：
+
+明確脫離 MA
+繼續往突破方向上漲，
+
+則：
+
+TREND_CONTINUATION_AWAY_FROM_MA。
+
+這就是：
+
+不屬於前三種
+的主要結果。
+
+==================================================
+NO HORIZON
+==================================================
+
+TREND_CONTINUATION
+不是：
+
+因為「過了10天」
+
+就判定。
+
+必須由：
+
+價格相對 MA
+明確脫離
+
+的 causal price condition
+確認。
+
+==================================================
+SOL MUST FREEZE
+==================================================
+
+「明確脫離 MA」
+目前尚未正式數值化。
+
+Sol 必須比較：
+
+A.
+Close >= MA × 1.002
+
+B.
+distance / ATR14 >= k
+
+C.
+hybrid
+
+並盡量與：
+
+Day1 肉眼 breakout threshold
+
+保持一致的視覺語意。
+
+不要直接 implementation。
+
+==================================================
+MA RETEST
+==================================================
+
+使用者指定：
+
+均線上下 0.1%。
+
+對 day t：
+
+MAZoneLow =
+MA(t) × 0.999
+
+MAZoneHigh =
+MA(t) × 1.001。
+
+若 K線 range：
+
+[Low, High]
+
+與：
+
+[MAZoneLow, MAZoneHigh]
+
+有交集：
+
+MA_RETEST_TOUCH。
+
+==================================================
+LONG RETEST REBOUND
+==================================================
+
+候選：
+
+touch MA ±0.1%
+
+AND
+
+completed Close > MA
+
+=> MA_RETEST_REBOUND。
+
+Sol 必須確認：
+
+使用 MA(t)
+為 completed visual MA
+
+以及 causal order。
+
+==================================================
+SHORT RETEST REJECTION
+==================================================
+
+mirror：
+
+touch
+
+AND
+
+Close < MA
+
+=> MA_RETEST_REJECTION。
+
+==================================================
+RETURN TO BEAR
+==================================================
+
+Long Day2 failure：
+
+重回空頭
+目前人工概念：
+
+跌回 MA 下方。
+
+Sol 必須比較：
+
+A.
+Close < MA
+
+B.
+Close <= MA × 0.999
+
+C.
+ATR-normalized clean break。
+
+==================================================
+IMPORTANT
+==================================================
+
+這裡不能使用：
+
+固定 follow-up horizon。
+
+只需要：
+
+某日正式滿足
+RETURN_TO_BEAR condition
+
+即成為 terminal outcome。
+
+==================================================
+SHORT MIRROR
+==================================================
+
+Short breakout：
+
+RETURN_TO_BULL
+
+方向鏡像。
+
+==================================================
+SIDEWAYS
+==================================================
+
+不得沿用上一 prompt
+的：
+
+5D / 10D maximum observation horizon。
+
+使用者不需要
+固定 follow-up horizon。
+
+==================================================
+SIDEWAYS STILL NEEDS CONFIRMATION
+==================================================
+
+但 sideways
+必須有 causal confirmation rule。
+
+Sol 必須比較：
+
+A.
+Reuse existing
+MA_BOX_LONG_V1
+entanglement / box logic
+
+B.
+獨立 range-compression rule
+
+C.
+兩者結合。
+
+==================================================
+IMPORTANT DISTINCTION
+==================================================
+
+如果使用 N bars
+確認橫盤：
+
+N 只是：
+
+minimum confirmation structure
+
+不是：
+
+maximum follow-up horizon。
+
+例如：
+
+用4根bar確認box
+
+可以。
+
+但不能：
+
+「10日內沒發生就算不是橫盤」。
+
+==================================================
+PREFERRED FIRST CANDIDATE
+==================================================
+
+優先檢查：
+
+是否可直接 reuse
+MA_BOX_LONG_V1
+已封版的 causal：
+
+entanglement / BOX
+
+作：
+
+SIDEWAYS confirmation。
+
+優點：
+
+已經符合使用者
+人工看圖的糾結/箱型概念
+
+而且已有 audited semantics。
+
+但：
+
+Sol 必須分析
+是否過度狹窄。
+
+==================================================
+FIRST-TERMINAL-OUTCOME
+==================================================
+
+Day2 failure後：
+
+追蹤直到：
+
+第一個 terminal outcome。
+
+Long：
+
+A Retest Rebound
+
+B Return to Bear
+
+C Sideways
+
+D Trend Continuation Away
+
+==================================================
+SAME-DAY MULTIPLE OUTCOMES
+==================================================
+
+如果同一 completed day
+同時可能：
+
+touch MA
+Close below MA
+
+或：
+
+box成立
+與其他 condition重疊，
+
+Sol 必須設計：
+
+deterministic precedence。
+
+不得：
+
+一個 event
+同時放進兩個
+terminal classes。
+
+==================================================
+7. DAY2 FAILURE × VOLUME
+==================================================
+
+同樣使用 nested：
+
+>=10
+>=20
+>=30。
+
+對每組輸出：
+
+N
+
+P(Retest Rebound)
+
+P(Return to Bear)
+
+P(Sideways)
+
+P(前三種合計)
+
+P(Trend Continuation)
+
+Wilson CI。
+
+==================================================
+NO-VOLUME CONDITION
+==================================================
+
+另外可輸出：
+
+VolumeIncrease <10%
+
+作對照。
+
+但不要叫：
+
+No volume
+
+如果其實只是：
+
+<10%。
+
+正式命名：
+
+VOL_LT_10。
+
+==================================================
+8. DIRECTION MODE
+==================================================
+
+UI：
+
+LONG_ONLY
+
+SHORT_ONLY
+
+LONG_SHORT_SPLIT。
+
+==================================================
+DO NOT POOL
+==================================================
+
+Long
+與
+Short
+
+不可以直接混在
+同一 probability denominator。
+
+Split mode：
+
+同頁各自顯示。
+
+==================================================
+9. ENTANGLEMENT MODE
+==================================================
+
+UI：
+
+ALL
+
+EXCLUDE_ENTANGLED
+
+ONLY_ENTANGLED
+
+SPLIT_ENTANGLED_CLEAN。
+
+==================================================
+ENTANGLEMENT CLASSIFICATION
+==================================================
+
+必須：
+
+使用 signal當下
+因果已知狀態。
+
+不能：
+
+用未來幾天形成的box
+回頭把 Day1
+分類成 entangled。
+
+==================================================
+SOURCE
+==================================================
+
+優先 reuse：
+
+MA_BOX_LONG_V1
+已封版 causal
+entanglement semantics。
+
+==================================================
+10. EVENT TABLE
+==================================================
+
+每個 Day1 breakout
+建立 immutable event。
+
+至少：
+
+event_id
+
+ticker
+
+sma_period
+
+direction
+
+day1_date
+
+day1_close
+
+ma_day1
+
+ma_day_minus_1
+
+breakout_distance_pct
+
+breakout_distance_atr
+
+breakout_definition_revision
+
+reference_entry
+
+atr14_snapshot
+
+volume_day1
+
+volume_previous
+
+volume_change
+
+vol_ge_10
+
+vol_ge_20
+
+vol_ge_30
+
+entanglement_status
+
+day2_date
+
+day2_close
+
+day2_evaluable
+
+day2_success
+
+dynamic_stop_history
+
+target_3pct
+
+target_0_5atr
+
+target_1atr
+
+target_1_5atr
+
+target_2atr
+
+target_3atr
+
+target_or_stop_first
+
+target_resolution_date
+
+day2_failure_terminal_outcome
+
+terminal_outcome_date
+
+retest data
+
+return-to-bear/bull data
+
+sideways data
+
+trend-continuation data
+
+censor_status。
+
+==================================================
+11. TARGET RESULT STATES
+==================================================
+
+每 target：
+
+SUCCESS_TARGET_FIRST
+
+FAIL_STOP_FIRST
+
+RIGHT_CENSORED。
+
+不能：
+
+study end
+未命中target
+
+直接算 failure。
+
+==================================================
+12. DAY2 FAILURE STATES
+==================================================
+
+Terminal：
+
+RETEST_REBOUND
+
+RETURN_TO_BEAR
+
+SIDEWAYS
+
+TREND_CONTINUATION_AWAY
+
+RIGHT_CENSORED。
+
+Short mirror
+使用相應名稱。
+
+==================================================
+13. PROBABILITY DENOMINATORS
+==================================================
+
+每個 probability
+必須明確保存：
+
+eligible_count
+
+resolved_count
+
+success_count
+
+censored_count。
+
+==================================================
+TARGET PROBABILITY
+==================================================
+
+Target success：
+
+success_count
+/
+resolved_count
+
+其中：
+
+resolved：
+
+Target first
+或
+Stop first。
+
+Censored：
+
+不進 denominator。
+
+==================================================
+DAY2 FAILURE OUTCOME PROBABILITY
+==================================================
+
+只對：
+
+terminal outcome已確定
+
+的 events
+作 denominator。
+
+Study end仍未分類：
+
+RIGHT_CENSORED
+
+不當作：
+
+Trend Continuation。
+
+==================================================
+14. STATISTICAL OUTPUT
+==================================================
+
+每個 probability：
+
+k/n
+
+%
+
+Wilson 95% CI。
+
+若：
+
+n < 20
+
+標：
+
+LOW SAMPLE SIZE。
+
+==================================================
+15. REQUIRED OUTPUTS
+==================================================
+
+A.
+Breakout count
+
+B.
+Day2 success probability
+
+C.
+Volume >=10/20/30 probabilities
+
+D.
+Day2 + volume probabilities
+
+E.
+Target-before-stop matrix
+
+F.
+Volume-conditioned targets
+
+G.
+Day2-conditioned targets
+
+H.
+Day2 + volume-conditioned targets
+
+I.
+Day2 failure terminal outcome table
+
+J.
+Day2 failure前三類 combined probability
+
+K.
+Day2 failure × volume table
+
+L.
+Long/Short split
+
+M.
+Entangled/Clean split
+
+N.
+Event audit table。
+
+==================================================
+16. FAILURE OUTPUT EXAMPLE
+==================================================
+
+例如：
+
+Day2失敗 N=100
+
+Retest rebound:
+31 / 95
+
+Return to bear:
+27 / 95
+
+Sideways:
+22 / 95
+
+前三類合計:
+80 / 95
+
+Trend continuation:
+15 / 95
+
+Right censored:
+5
+
+其中：
+
+31+27+22+15 =95。
+
+不得：
+
+三種重疊
+加起來>95。
+
+==================================================
+17. TARGET OUTPUT EXAMPLE
+==================================================
+
+例如：
+
+Condition:
+Day2 success + Vol>=20%
+
+Resolved:
+60
+
+Right censored:
+4
+
++3% before MA stop:
+38 / 60
+
++0.5 ATR:
+...
+
++1 ATR:
+...
+
++1.5 ATR:
+...
+
++2 ATR:
+...
+
++3 ATR:
+...
+
+==================================================
+18. AGGREGATE DRILLDOWN
+==================================================
+
+任何：
+
+38/60
+
+31/95
+
+等 cell
+
+都必須可以查：
+
+60或95筆
+是哪幾個 event。
+
+Numerator
+與 denominator
+都可 audit。
+
+==================================================
+19. CHART
+==================================================
+
+Event chart顯示：
+
+Day1 breakout threshold
+
+MA
+
+Day2
+
+Reference Entry
+MA(D-1)×1.01
+
+Dynamic MA stop
+
++3%
+
+ATR target levels
+
+Volume %
+
+Retest zone ±0.1%
+
+Terminal outcome
+
+Entanglement / box context。
+
+==================================================
+20. REFERENCE ENTRY WARNING
+==================================================
+
+UI 必須標：
+
+「統計基準進場價」
+
+不得標：
+
+「實際策略成交價」
+
+因：
+
+Day2條件
+可能是事後才知道。
+
+==================================================
+21. PERSISTENCE
+==================================================
+
+新增獨立：
+
+ma_breakout_analytics_studies
+
+ma_breakout_analytics_events
+
+ma_breakout_target_outcomes
+
+ma_breakout_failure_outcomes
+
+ma_breakout_aggregates
+
+或等價 normalized schema。
+
+不得污染：
+
+MA_BOX Rev3 tables。
+
+==================================================
+22. API
+==================================================
+
+Dedicated namespace。
+
+例如：
+
+POST
+/api/ma-analytics/studies
+
+GET
+/api/ma-analytics/studies/{id}/summary
+
+GET
+.../events
+
+GET
+.../targets
+
+GET
+.../failure-paths
+
+GET
+.../chart/{period}
+
+GET
+.../export。
+
+==================================================
+23. NEARBY SMA
+==================================================
+
+selected ± range
+
+每個 SMA
+獨立 analytics。
+
+不得：
+
+rank
+
+score
+
+推薦最佳 MA。
+
+==================================================
+24. PERFORMANCE
+==================================================
+
+Daily data
+Nearby ±5
+11 periods。
+
+先 benchmark。
+
+不要：
+
+premature multiprocessing。
+
+==================================================
+25. TEST PLAN
+==================================================
+
+至少：
+
+1.
+Day1 tiny MA cross
+未達 visual threshold
+=> no breakout
+
+2.
+Day1 long valid breakout
+
+3.
+Day1 short valid breakout
+
+4.
+Same-side continuation
+不重複 breakout
+
+5.
+Re-arm after opposite side
+
+6.
+Day2 long success
+
+7.
+Day2 long failure
+
+8.
+Day2 short success
+
+9.
+Day2 short failure
+
+10.
+Volume exactly +10%
+
+11.
+Volume exactly +20%
+
+12.
+Volume exactly +30%
+
+13.
++35% simultaneously
+belongs GE10/GE20/GE30
+
+14.
+Volume +15%
+belongs GE10 only
+
+15.
+invalid previous volume
+
+16.
+ReferenceEntry =
+MA previous ×1.01
+
+17.
+Reference entry
+does not define Day1 breakout
+
+18.
+3% target before stop
+
+19.
+stop before 3%
+
+20.
+0.5ATR target before stop
+
+21.
+1ATR
+
+22.
+1.5ATR
+
+23.
+2ATR
+
+24.
+3ATR
+
+25.
+same-day target+stop
+green OHLC order
+
+26.
+same-day target+stop
+red OHLC order
+
+27.
+target right-censored
+
+28.
+dynamic stop updates with MA
+
+29.
+ATR target snapshot fixed
+
+30.
+Day2 fail
+MA retest touch ±0.1%
+
+31.
+Retest rebound terminal
+
+32.
+Return-to-bear terminal
+
+33.
+Sideways terminal
+
+34.
+Trend-continuation terminal
+
+35.
+No fixed follow-up horizon
+
+36.
+Terminal outcomes mutually exclusive
+
+37.
+前三類 combined count
+equals component sum
+
+38.
+right-censored failure event
+excluded denominator
+
+39.
+Volume GE10 failure outcomes
+
+40.
+Volume GE20 failure outcomes
+
+41.
+Volume GE30 failure outcomes
+
+42.
+Long/Short isolation
+
+43.
+Entanglement causal classification
+
+44.
+Clean classification
+
+45.
+Nearby SMA isolation
+
+46.
+Wilson CI
+
+47.
+Low N warning
+
+48.
+Aggregate numerator drilldown
+
+49.
+Aggregate denominator drilldown
+
+50.
+No mutation
+MA_BOX_LONG_V1
+
+51.
+Legacy regression unchanged。
+
+==================================================
+26. SOL MUST DECIDE BEFORE IMPLEMENTATION
+==================================================
+
+Blocking decisions仍有：
+
+A.
+Day1 visual breakout：
+
++0.2%
+
+ATR-normalized
+
+hybrid
+
+哪個最符合使用者肉眼。
+
+B.
+Trend Continuation Away：
+
+明確脫離 MA
+的 numeric rule。
+
+C.
+Return to Bear/Bull：
+
+Close cross
+0.1%
+或 ATR clean break。
+
+D.
+Sideways：
+
+reuse MA_BOX entanglement/box
+
+或獨立 causal range rule。
+
+E.
+Same-day terminal outcome precedence。
+
+F.
+Short-side
+reference entry
+與 dynamic stop mirror。
+
+==================================================
+DO NOT IMPLEMENT YET
+==================================================
+
+Sol本輪只：
+
+audit
+compare
+formalize。
+
+若 A-F
+尚未 freeze：
+
+不要交 Luna。
+
+==================================================
+SOL OUTPUT
+==================================================
+
+依序輸出：
+
+1.
+Authoritative Two-Day Rule audit
+
+2.
+Authoritative breakout-related repo audit
+
+3.
+Day1 visual breakout recommendation
+
+4.
+0.2% vs ATR comparison
+
+5.
+Reference-entry formalization
+
+6.
+Dynamic-stop target design
+
+7.
+ATR target design
+
+8.
+Nested volume threshold design
+
+9.
+Day2 + volume conditional design
+
+10.
+No-horizon target semantics
+
+11.
+Day2 failure state machine
+
+12.
+MA retest ±0.1% semantics
+
+13.
+Return-to-bear/bull recommendation
+
+14.
+Sideways recommendation
+
+15.
+Trend-continuation-away recommendation
+
+16.
+Terminal precedence
+
+17.
+Long/Short mirror
+
+18.
+Entanglement filter
+
+19.
+Censoring
+
+20.
+Event schema
+
+21.
+Aggregate schema
+
+22.
+Wilson CI
+
+23.
+Frontend output
+
+24.
+Chart overlay
+
+25.
+API
+
+26.
+Persistence
+
+27.
+Test matrix
+
+28.
+Remaining ambiguities。
+
+==================================================
+FREEZE
+==================================================
+
+如果所有 decision
+已凍結：
+
+輸出：
+
+MA_BREAKOUT_ANALYTICS_V1 SPEC READY FOR USER REVIEW
+
+不要直接 implementation。
+
+最後：
+
+MA_BREAKOUT_ANALYTICS_V1 REVISION 2
+MASTER SPEC REVIEW COMPLETE

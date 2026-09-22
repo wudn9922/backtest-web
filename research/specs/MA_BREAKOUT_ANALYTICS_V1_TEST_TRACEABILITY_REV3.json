@@ -1,0 +1,2165 @@
+{
+  "active_coverage_counts": {
+    "COMBINED_DIRECT": 11,
+    "DIRECT": 105,
+    "MISSING": 0
+  },
+  "requirement_counts": {
+    "active": 116,
+    "master_test_matrix": 72,
+    "rev3_direct_test_matrix": 38,
+    "rev3_impacted_test_requirements": 7,
+    "superseded_by_rev3": 1,
+    "total_source_requirements": 117
+  },
+  "requirements": [
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_subthreshold_ma_cross_does_not_create_breakout; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-001",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-001",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 1,
+      "source_text_verbatim": "1. Tiny cross不建event  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_subthreshold_ma_cross_does_not_create_breakout"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_subthreshold_ma_cross_does_not_create_breakout",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_day1_uses_completed_same_day_sma_and_reference_uses_previous_sma; AST assert count=7 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-002",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-002",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 2,
+      "source_text_verbatim": "2. Long valid Day1  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_day1_uses_completed_same_day_sma_and_reference_uses_previous_sma"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_day1_uses_completed_same_day_sma_and_reference_uses_previous_sma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_short_day1_breakout_and_day2_confirmation; AST assert count=4 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-003",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-003",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 3,
+      "source_text_verbatim": "3. Short valid Day1  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_short_day1_breakout_and_day2_confirmation"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_short_day1_breakout_and_day2_confirmation",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_latch_requires_close_back_at_ma_before_a_second_event; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-004",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-004",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 4,
+      "source_text_verbatim": "4. Same-side不重複  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_latch_requires_close_back_at_ma_before_a_second_event"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_latch_requires_close_back_at_ma_before_a_second_event",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_latch_requires_close_back_at_ma_before_a_second_event; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-005",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-005",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 5,
+      "source_text_verbatim": "5. Opposite-side rearm  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_latch_requires_close_back_at_ma_before_a_second_event"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_latch_requires_close_back_at_ma_before_a_second_event",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill; AST assert count=13 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-006",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-006",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 6,
+      "source_text_verbatim": "6–9. Long/Short Day2 success/failure  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_day2_close_equality_is_failure; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-007",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-007",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 7,
+      "source_text_verbatim": "6–9. Long/Short Day2 success/failure  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_day2_close_equality_is_failure"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_day2_close_equality_is_failure",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_short_day1_breakout_and_day2_confirmation; AST assert count=4 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-008",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-008",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 8,
+      "source_text_verbatim": "6–9. Long/Short Day2 success/failure  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_short_day1_breakout_and_day2_confirmation"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_short_day1_breakout_and_day2_confirmation",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_short_day1_breakout_and_day2_confirmation; AST assert count=4 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-009",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-009",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 9,
+      "source_text_verbatim": "6–9. Long/Short Day2 success/failure  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_short_day1_breakout_and_day2_confirmation"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_short_day1_breakout_and_day2_confirmation",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_volume_threshold_boundaries_are_inclusive; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-010",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-010",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 10,
+      "source_text_verbatim": "10–12. Volume恰為10/20/30  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_volume_threshold_boundaries_are_inclusive"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_volume_threshold_boundaries_are_inclusive",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_volume_threshold_boundaries_are_inclusive; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-011",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-011",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 11,
+      "source_text_verbatim": "10–12. Volume恰為10/20/30  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_volume_threshold_boundaries_are_inclusive"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_volume_threshold_boundaries_are_inclusive",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_volume_threshold_boundaries_are_inclusive; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-012",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-012",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 12,
+      "source_text_verbatim": "10–12. Volume恰為10/20/30  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_volume_threshold_boundaries_are_inclusive"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_volume_threshold_boundaries_are_inclusive",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_volume_thresholds_are_nested_and_35_percent_hits_all_flags; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-013",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-013",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 13,
+      "source_text_verbatim": "13. +35%同屬三個門檻  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_volume_thresholds_are_nested_and_35_percent_hits_all_flags"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_volume_thresholds_are_nested_and_35_percent_hits_all_flags",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_volume_threshold_boundaries_are_inclusive; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-014",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-014",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 14,
+      "source_text_verbatim": "14. +15%僅GE10  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_volume_threshold_boundaries_are_inclusive"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_volume_threshold_boundaries_are_inclusive",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_invalid_volume_is_not_evaluable_but_zero_current_volume_is_valid; AST assert count=4 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-015",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-015",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 15,
+      "source_text_verbatim": "15. Invalid previous volume  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_invalid_volume_is_not_evaluable_but_zero_current_volume_is_valid"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_invalid_volume_is_not_evaluable_but_zero_current_volume_is_valid",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_day1_uses_completed_same_day_sma_and_reference_uses_previous_sma; AST assert count=7 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-016",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-016",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 16,
+      "source_text_verbatim": "16. Long reference = previous MA×1.01  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_day1_uses_completed_same_day_sma_and_reference_uses_previous_sma"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_day1_uses_completed_same_day_sma_and_reference_uses_previous_sma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_reference_entry_is_not_breakout_close_or_execution; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-017",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-017",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 17,
+      "source_text_verbatim": "17. Reference entry不定義Day1  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_reference_entry_is_not_breakout_close_or_execution"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_reference_entry_is_not_breakout_close_or_execution",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_scanner_resolves_each_target_family_against_the_dynamic_stop; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-018",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-018",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 18,
+      "source_text_verbatim": "18–24. +3%與五種ATR target/stop順序  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_scanner_resolves_each_target_family_against_the_dynamic_stop"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_scanner_resolves_each_target_family_against_the_dynamic_stop",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_same_session_green_path_can_stop_before_three_percent_target; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-019",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-019",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 19,
+      "source_text_verbatim": "18–24. +3%與五種ATR target/stop順序  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_same_session_green_path_can_stop_before_three_percent_target"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_same_session_green_path_can_stop_before_three_percent_target",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_scanner_resolves_each_target_family_against_the_dynamic_stop; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-020",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-020",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 20,
+      "source_text_verbatim": "18–24. +3%與五種ATR target/stop順序  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_scanner_resolves_each_target_family_against_the_dynamic_stop"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_scanner_resolves_each_target_family_against_the_dynamic_stop",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_scanner_resolves_each_target_family_against_the_dynamic_stop; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-021",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-021",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 21,
+      "source_text_verbatim": "18–24. +3%與五種ATR target/stop順序  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_scanner_resolves_each_target_family_against_the_dynamic_stop"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_scanner_resolves_each_target_family_against_the_dynamic_stop",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_scanner_resolves_each_target_family_against_the_dynamic_stop; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-022",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-022",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 22,
+      "source_text_verbatim": "18–24. +3%與五種ATR target/stop順序  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_scanner_resolves_each_target_family_against_the_dynamic_stop"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_scanner_resolves_each_target_family_against_the_dynamic_stop",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_scanner_resolves_each_target_family_against_the_dynamic_stop; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-023",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-023",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 23,
+      "source_text_verbatim": "18–24. +3%與五種ATR target/stop順序  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_scanner_resolves_each_target_family_against_the_dynamic_stop"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_scanner_resolves_each_target_family_against_the_dynamic_stop",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_scanner_resolves_each_target_family_against_the_dynamic_stop; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-024",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-024",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 24,
+      "source_text_verbatim": "18–24. +3%與五種ATR target/stop順序  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_scanner_resolves_each_target_family_against_the_dynamic_stop"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_scanner_resolves_each_target_family_against_the_dynamic_stop",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_same_day_target_stop_uses_frozen_ohlc_heuristic; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-025",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-025",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 25,
+      "source_text_verbatim": "25–26. Green/Red同日target+stop  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_same_day_target_stop_uses_frozen_ohlc_heuristic"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_same_day_target_stop_uses_frozen_ohlc_heuristic",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_same_day_target_stop_uses_frozen_ohlc_heuristic; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-026",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-026",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 26,
+      "source_text_verbatim": "25–26. Green/Red同日target+stop  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_same_day_target_stop_uses_frozen_ohlc_heuristic"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_same_day_target_stop_uses_frozen_ohlc_heuristic",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_target_observer_has_no_fixed_horizon; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-027",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-027",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 27,
+      "source_text_verbatim": "27. Target right censor  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_target_observer_has_no_fixed_horizon"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_target_observer_has_no_fixed_horizon",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_target_dynamic_stop_is_previous_completed_sma_and_updates_each_day; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-028",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-028",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 28,
+      "source_text_verbatim": "28. Dynamic stop每日更新  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_target_dynamic_stop_is_previous_completed_sma_and_updates_each_day"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_target_dynamic_stop_is_previous_completed_sma_and_updates_each_day",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_all_atr_targets_use_the_frozen_day1_atr_snapshot; AST assert count=4 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-029",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-029",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 29,
+      "source_text_verbatim": "29. ATR snapshot固定  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_all_atr_targets_use_the_frozen_day1_atr_snapshot"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_all_atr_targets_use_the_frozen_day1_atr_snapshot",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_retest_precedes_trend_when_both_are_true; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-030",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-030",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 30,
+      "source_text_verbatim": "30. ±0.1% zone intersection  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_retest_precedes_trend_when_both_are_true"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_retest_precedes_trend_when_both_are_true",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_retest_precedes_trend_when_both_are_true; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-031",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-031",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 31,
+      "source_text_verbatim": "31. Retest terminal  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_retest_precedes_trend_when_both_are_true"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_retest_precedes_trend_when_both_are_true",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_return_terminal_precedes_other_failure_outcomes; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-032",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-032",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 32,
+      "source_text_verbatim": "32. Return terminal  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_return_terminal_precedes_other_failure_outcomes"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_return_terminal_precedes_other_failure_outcomes",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-033",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-033",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 33,
+      "source_text_verbatim": "33. Sideways terminal  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_trend_away_requires_clear_side_and_new_advance_over_d1_close, tests/test_ma_breakout_analytics.py::test_long_trend_progress_without_clear_above_is_not_trend_continuation, tests/test_ma_breakout_analytics.py::test_short_trend_progress_without_clear_below_is_not_trend_continuation; AST assert count=8 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-034",
+      "coverage_status": "COMBINED_DIRECT",
+      "requirement_id": "REV2-TEST-034",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 34,
+      "source_text_verbatim": "34. Trend terminal  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_trend_away_requires_clear_side_and_new_advance_over_d1_close",
+        "tests/test_ma_breakout_analytics.py::test_long_trend_progress_without_clear_above_is_not_trend_continuation",
+        "tests/test_ma_breakout_analytics.py::test_short_trend_progress_without_clear_below_is_not_trend_continuation"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_trend_away_requires_clear_side_and_new_advance_over_d1_close",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_failure_observer_has_no_fixed_followup_timeout; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-035",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-035",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 35,
+      "source_text_verbatim": "35. 無fixed follow-up horizon  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_failure_observer_has_no_fixed_followup_timeout"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_failure_observer_has_no_fixed_followup_timeout",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_return_terminal_precedes_other_failure_outcomes, tests/test_ma_breakout_analytics.py::test_retest_precedes_trend_when_both_are_true, tests/test_ma_breakout_analytics.py::test_trend_continuation_precedes_sideways_when_both_conditions_are_true; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-036",
+      "coverage_status": "COMBINED_DIRECT",
+      "requirement_id": "REV2-TEST-036",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 36,
+      "source_text_verbatim": "36. Terminal互斥  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_return_terminal_precedes_other_failure_outcomes",
+        "tests/test_ma_breakout_analytics.py::test_retest_precedes_trend_when_both_are_true",
+        "tests/test_ma_breakout_analytics.py::test_trend_continuation_precedes_sideways_when_both_conditions_are_true"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_return_terminal_precedes_other_failure_outcomes",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_failure_combined_count_reconciles_to_mutually_exclusive_classes; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-037",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-037",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 37,
+      "source_text_verbatim": "37. Combined count等於前三類加總  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_failure_combined_count_reconciles_to_mutually_exclusive_classes"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_failure_combined_count_reconciles_to_mutually_exclusive_classes",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_right_censored_failure_is_excluded_from_failure_probability_denominator; AST assert count=5 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-038",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-038",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 38,
+      "source_text_verbatim": "38. Failure right censor不進denominator  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_right_censored_failure_is_excluded_from_failure_probability_denominator"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_right_censored_failure_is_excluded_from_failure_probability_denominator",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_failure_volume_conditioned_aggregates_are_nested; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-039",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-039",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 39,
+      "source_text_verbatim": "39–41. Failure outcomes × GE10/20/30  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_failure_volume_conditioned_aggregates_are_nested"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_failure_volume_conditioned_aggregates_are_nested",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_failure_volume_conditioned_aggregates_are_nested; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-040",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-040",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 40,
+      "source_text_verbatim": "39–41. Failure outcomes × GE10/20/30  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_failure_volume_conditioned_aggregates_are_nested"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_failure_volume_conditioned_aggregates_are_nested",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_failure_volume_conditioned_aggregates_are_nested; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-041",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-041",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 41,
+      "source_text_verbatim": "39–41. Failure outcomes × GE10/20/30  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_failure_volume_conditioned_aggregates_are_nested"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_failure_volume_conditioned_aggregates_are_nested",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_long_short_are_not_pooled; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-042",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-042",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 42,
+      "source_text_verbatim": "42. Long/Short isolation  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_long_short_are_not_pooled"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_long_short_are_not_pooled",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_pre_evaluation_box_warmup_is_included_in_breakout_cohort_snapshot; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-043",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-043",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 43,
+      "source_text_verbatim": "43. Entanglement causal classification  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_pre_evaluation_box_warmup_is_included_in_breakout_cohort_snapshot"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_pre_evaluation_box_warmup_is_included_in_breakout_cohort_snapshot",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_clean_signal_is_classified_outside_the_entanglement_cohort; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-044",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-044",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 44,
+      "source_text_verbatim": "44. Clean classification  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_clean_signal_is_classified_outside_the_entanglement_cohort"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_clean_signal_is_classified_outside_the_entanglement_cohort",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_period_runs_are_independent_and_combined_run_matches_standalone_metrics, tests/test_ma_breakout_analytics.py::test_targeted_sma23_ma_path_mutation_cannot_change_sma24_or_25_execution_state; AST assert count=7 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-045",
+      "coverage_status": "COMBINED_DIRECT",
+      "requirement_id": "REV2-TEST-045",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 45,
+      "source_text_verbatim": "45. Nearby SMA isolation  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_period_runs_are_independent_and_combined_run_matches_standalone_metrics",
+        "tests/test_ma_breakout_analytics.py::test_targeted_sma23_ma_path_mutation_cannot_change_sma24_or_25_execution_state"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_period_runs_are_independent_and_combined_run_matches_standalone_metrics",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_wilson_ci_and_low_sample_contract; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-046",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-046",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 46,
+      "source_text_verbatim": "46. Wilson CI  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_wilson_ci_and_low_sample_contract"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_wilson_ci_and_low_sample_contract",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_wilson_ci_and_low_sample_contract; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-047",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-047",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 47,
+      "source_text_verbatim": "47. Low-N warning  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_wilson_ci_and_low_sample_contract"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_wilson_ci_and_low_sample_contract",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_target_aggregate_membership_supports_denominator_and_numerator_drilldown; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-048",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-048",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 48,
+      "source_text_verbatim": "48. Numerator drilldown  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_target_aggregate_membership_supports_denominator_and_numerator_drilldown"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_target_aggregate_membership_supports_denominator_and_numerator_drilldown",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_target_aggregate_membership_supports_denominator_and_numerator_drilldown; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-049",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-049",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 49,
+      "source_text_verbatim": "49. Denominator drilldown  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_target_aggregate_membership_supports_denominator_and_numerator_drilldown"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_target_aggregate_membership_supports_denominator_and_numerator_drilldown",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_analytics_does_not_modify_ma_box_source; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-050",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-050",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 50,
+      "source_text_verbatim": "50. MA_BOX Rev3 no mutation  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_analytics_does_not_modify_ma_box_source"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_analytics_does_not_modify_ma_box_source",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_analytics_keeps_frozen_canonical_and_legacy_source_hashes; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-051",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-051",
+      "source_section": "## 27. Test matrix / 原始51項全部保留",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 51,
+      "source_text_verbatim": "51. Legacy regression unchanged  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_analytics_keeps_frozen_canonical_and_legacy_source_hashes"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_analytics_keeps_frozen_canonical_and_legacy_source_hashes",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_day1_uses_completed_same_day_sma_and_reference_uses_previous_sma; AST assert count=7 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-052",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-052",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 52,
+      "source_text_verbatim": "52. Day1使用completed MA(t)，不是MA(t-1)  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_day1_uses_completed_same_day_sma_and_reference_uses_previous_sma"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_day1_uses_completed_same_day_sma_and_reference_uses_previous_sma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_subthreshold_ma_cross_does_not_create_breakout; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-053",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-053",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 53,
+      "source_text_verbatim": "53. Day1只在close確認；High-only不成立  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_subthreshold_ma_cross_does_not_create_breakout"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_subthreshold_ma_cross_does_not_create_breakout",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_post_event_grey_zone_does_not_rearm; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-054",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-054",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 54,
+      "source_text_verbatim": "54. Post-event grey zone不rearm  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_post_event_grey_zone_does_not_rearm"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_post_event_grey_zone_does_not_rearm",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_latch_requires_close_back_at_ma_before_a_second_event; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-055",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-055",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 55,
+      "source_text_verbatim": "55. Raw opposite-side completed close才rearm  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_latch_requires_close_back_at_ma_before_a_second_event"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_latch_requires_close_back_at_ma_before_a_second_event",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_existing_trend_at_study_start_is_not_fabricated_as_new_breakout; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-056",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-056",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 56,
+      "source_text_verbatim": "56. Study開始無prior latch時不得創造事件  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_existing_trend_at_study_start_is_not_fabricated_as_new_breakout"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_existing_trend_at_study_start_is_not_fabricated_as_new_breakout",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill; AST assert count=13 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-057",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-057",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 57,
+      "source_text_verbatim": "57. Target observer最早從D2 Open開始  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill; AST assert count=13 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-058",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-058",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 58,
+      "source_text_verbatim": "58. Day1 intraday target不得回填  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_target_open_gap_rules; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-059",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-059",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 59,
+      "source_text_verbatim": "59. Long/Short open-gap target/stop mirror  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_target_open_gap_rules"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_target_open_gap_rules",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_failure_return_mirrors_by_direction; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-060",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-060",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 60,
+      "source_text_verbatim": "60. Return使用opposite ±0.2%  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_failure_return_mirrors_by_direction"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_failure_return_mirrors_by_direction",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_trend_away_requires_clear_side_and_new_advance_over_d1_close, tests/test_ma_breakout_analytics.py::test_short_trend_away_requires_clear_side_and_a_new_d1_low_close, tests/test_ma_breakout_analytics.py::test_long_trend_progress_without_clear_above_is_not_trend_continuation, tests/test_ma_breakout_analytics.py::test_short_trend_progress_without_clear_below_is_not_trend_continuation; AST assert count=10 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-061",
+      "coverage_status": "COMBINED_DIRECT",
+      "requirement_id": "REV2-TEST-061",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 61,
+      "source_text_verbatim": "61. Trend away使用same-side ±0.2%  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_trend_away_requires_clear_side_and_new_advance_over_d1_close",
+        "tests/test_ma_breakout_analytics.py::test_short_trend_away_requires_clear_side_and_a_new_d1_low_close",
+        "tests/test_ma_breakout_analytics.py::test_long_trend_progress_without_clear_above_is_not_trend_continuation",
+        "tests/test_ma_breakout_analytics.py::test_short_trend_progress_without_clear_below_is_not_trend_continuation"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_trend_away_requires_clear_side_and_new_advance_over_d1_close",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_return_precedes_sideways_when_both_conditions_are_true; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-062",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-062",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 62,
+      "source_text_verbatim": "62. Return優先於Sideways  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_return_precedes_sideways_when_both_conditions_are_true"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_return_precedes_sideways_when_both_conditions_are_true",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_retest_precedes_sideways_when_both_conditions_are_true; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-063",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-063",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 63,
+      "source_text_verbatim": "63. Retest優先於Sideways  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_retest_precedes_sideways_when_both_conditions_are_true"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_retest_precedes_sideways_when_both_conditions_are_true",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Historical test item is superseded by the linked later frozen requirement; not counted as active coverage.",
+      "binding_id": null,
+      "coverage_status": "SUPERSEDED_BY_REV3",
+      "requirement_id": "REV2-TEST-064",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 64,
+      "source_text_verbatim": "64. Sideways優先於Trend  ",
+      "status": "SUPERSEDED_BY_REV3",
+      "superseded_by_requirement_id": "REV3-TEST-023",
+      "test_bindings": [],
+      "test_file": null,
+      "test_function": null,
+      "verification_kind": "SPEC_REVISION"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_pre_evaluation_box_warmup_is_included_in_breakout_cohort_snapshot, tests/test_ma_breakout_analytics.py::test_entanglement_formed_after_day1_does_not_backpaint_cohort; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-065",
+      "coverage_status": "COMBINED_DIRECT",
+      "requirement_id": "REV2-TEST-065",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 65,
+      "source_text_verbatim": "65. Frozen VisualBoxObserver使用Rev2 qualifying formation bars  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_pre_evaluation_box_warmup_is_included_in_breakout_cohort_snapshot",
+        "tests/test_ma_breakout_analytics.py::test_entanglement_formed_after_day1_does_not_backpaint_cohort"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_pre_evaluation_box_warmup_is_included_in_breakout_cohort_snapshot",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_invalid_atr_target_is_not_evaluable_and_percentage_target_remains_available; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-066",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-066",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 66,
+      "source_text_verbatim": "66. ATR invalid只排除ATR target，不排除+3% target  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_invalid_atr_target_is_not_evaluable_and_percentage_target_remains_available"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_invalid_atr_target_is_not_evaluable_and_percentage_target_remains_available",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_volume_and_day2_probability_denominators_are_explicit; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-067",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-067",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 67,
+      "source_text_verbatim": "67. D2與volume joint denominator要求兩者均evaluable  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_volume_and_day2_probability_denominators_are_explicit"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_volume_and_day2_probability_denominators_are_explicit",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_target_families_have_independent_outcomes; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-068",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-068",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 68,
+      "source_text_verbatim": "68. Target outcomes按target獨立  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_target_families_have_independent_outcomes"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_target_families_have_independent_outcomes",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_entanglement_formed_after_day1_does_not_backpaint_cohort; AST assert count=4 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-069",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-069",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 69,
+      "source_text_verbatim": "69. Entanglement formed after Day1不得回畫  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_entanglement_formed_after_day1_does_not_backpaint_cohort"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_entanglement_formed_after_day1_does_not_backpaint_cohort",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_short_day1_breakout_and_day2_confirmation; AST assert count=4 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-070",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-070",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 70,
+      "source_text_verbatim": "70. Short E=MA(D1-1)×0.99  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_short_day1_breakout_and_day2_confirmation"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_short_day1_breakout_and_day2_confirmation",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_short_dynamic_stop_uses_previous_completed_ma; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-071",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-071",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 71,
+      "source_text_verbatim": "71. Short stop=MA(u-1)×1.015  ",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_short_dynamic_stop_uses_previous_completed_ma"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_short_dynamic_stop_uses_previous_completed_ma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_timeout_is_not_a_config_or_request_field; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV2-TEST-072",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV2-TEST-072",
+      "source_section": "## 27. Test matrix / 新增本次凍結決策的direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "source_test_number": 72,
+      "source_text_verbatim": "72. Config/schema不存在target timeout或failure timeout",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_timeout_is_not_a_config_or_request_field"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_timeout_is_not_a_config_or_request_field",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV3-CHANGE-01",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-CHANGE-01",
+      "source_item_number": 1,
+      "source_section": "## 7. 受影響 test matrix / 原有測試中以下項目必須修改",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": null,
+      "source_text_verbatim": "- Test 33 `Sideways terminal`：改用獨立range compression，不得依賴MA crossing。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_trend_away_requires_clear_side_and_new_advance_over_d1_close, tests/test_ma_breakout_analytics.py::test_short_trend_away_requires_clear_side_and_a_new_d1_low_close, tests/test_ma_breakout_analytics.py::test_long_trend_progress_without_clear_above_is_not_trend_continuation, tests/test_ma_breakout_analytics.py::test_short_trend_progress_without_clear_below_is_not_trend_continuation; AST assert count=10 (syntax sanity only).",
+      "binding_id": "pytest:REV3-CHANGE-02",
+      "coverage_status": "COMBINED_DIRECT",
+      "requirement_id": "REV3-CHANGE-02",
+      "source_item_number": 2,
+      "source_section": "## 7. 受影響 test matrix / 原有測試中以下項目必須修改",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": null,
+      "source_text_verbatim": "- Test 34 `Trend terminal`：必須同時驗證clear side及突破Day1 Close。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_trend_away_requires_clear_side_and_new_advance_over_d1_close",
+        "tests/test_ma_breakout_analytics.py::test_short_trend_away_requires_clear_side_and_a_new_d1_low_close",
+        "tests/test_ma_breakout_analytics.py::test_long_trend_progress_without_clear_above_is_not_trend_continuation",
+        "tests/test_ma_breakout_analytics.py::test_short_trend_progress_without_clear_below_is_not_trend_continuation"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_trend_away_requires_clear_side_and_new_advance_over_d1_close",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_return_precedes_sideways_when_both_conditions_are_true, tests/test_ma_breakout_analytics.py::test_retest_precedes_trend_when_both_are_true, tests/test_ma_breakout_analytics.py::test_trend_continuation_precedes_sideways_when_both_conditions_are_true; AST assert count=7 (syntax sanity only).",
+      "binding_id": "pytest:REV3-CHANGE-03",
+      "coverage_status": "COMBINED_DIRECT",
+      "requirement_id": "REV3-CHANGE-03",
+      "source_item_number": 3,
+      "source_section": "## 7. 受影響 test matrix / 原有測試中以下項目必須修改",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": null,
+      "source_text_verbatim": "- Test 36 `Terminal mutually exclusive`：使用新precedence。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_return_precedes_sideways_when_both_conditions_are_true",
+        "tests/test_ma_breakout_analytics.py::test_retest_precedes_trend_when_both_are_true",
+        "tests/test_ma_breakout_analytics.py::test_trend_continuation_precedes_sideways_when_both_conditions_are_true"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_return_precedes_sideways_when_both_conditions_are_true",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_failure_volume_conditioned_aggregates_are_nested; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV3-CHANGE-04",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-CHANGE-04",
+      "source_item_number": 4,
+      "source_section": "## 7. 受影響 test matrix / 原有測試中以下項目必須修改",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": null,
+      "source_text_verbatim": "- Tests 39–41：volume-conditioned failure outcomes套用新Sideways與Trend規則。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_failure_volume_conditioned_aggregates_are_nested"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_failure_volume_conditioned_aggregates_are_nested",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_entanglement_cohort_modes_filter_only_signal_snapshot, tests/test_ma_breakout_analytics.py::test_entangled_signal_can_resolve_without_sideways; AST assert count=5 (syntax sanity only).",
+      "binding_id": "pytest:REV3-CHANGE-05",
+      "coverage_status": "COMBINED_DIRECT",
+      "requirement_id": "REV3-CHANGE-05",
+      "source_item_number": 5,
+      "source_section": "## 7. 受影響 test matrix / 原有測試中以下項目必須修改",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": null,
+      "source_text_verbatim": "- Test 43只驗證entanglement cohort，不再兼任Sideways測試。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_entanglement_cohort_modes_filter_only_signal_snapshot",
+        "tests/test_ma_breakout_analytics.py::test_entangled_signal_can_resolve_without_sideways"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_entanglement_cohort_modes_filter_only_signal_snapshot",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_trend_continuation_precedes_sideways_when_both_conditions_are_true; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV3-CHANGE-06",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-CHANGE-06",
+      "source_item_number": 6,
+      "source_section": "## 7. 受影響 test matrix / 原有測試中以下項目必須修改",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": null,
+      "source_text_verbatim": "- Test 64改為`Trend優先於Sideways`。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_trend_continuation_precedes_sideways_when_both_conditions_are_true"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_trend_continuation_precedes_sideways_when_both_conditions_are_true",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma, tests/test_ma_breakout_analytics.py::test_sideways_can_be_below_ma_without_triggering_return_or_retest; AST assert count=8 (syntax sanity only).",
+      "binding_id": "pytest:REV3-CHANGE-07",
+      "coverage_status": "COMBINED_DIRECT",
+      "requirement_id": "REV3-CHANGE-07",
+      "source_item_number": 7,
+      "source_section": "## 7. 受影響 test matrix / 原有測試中以下項目必須修改",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": null,
+      "source_text_verbatim": "- 舊「Sideways使用VisualBoxObserver」測試刪除或改為cohort-only測試。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma",
+        "tests/test_ma_breakout_analytics.py::test_sideways_can_be_below_ma_without_triggering_return_or_retest"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-01",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-01",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 1,
+      "source_text_verbatim": "1. 四根completed follow-up bars才可Sideways。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_requires_exactly_four_followup_bars; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-02",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-02",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 2,
+      "source_text_verbatim": "2. 三根不得確認Sideways。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_requires_exactly_four_followup_bars"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_requires_exactly_four_followup_bars",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_requires_exactly_four_followup_bars; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-03",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-03",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 3,
+      "source_text_verbatim": "3. 五根不是必要條件；第四根已符合即可確認。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_requires_exactly_four_followup_bars"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_requires_exactly_four_followup_bars",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_requires_exactly_four_followup_bars; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-04",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-04",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 4,
+      "source_text_verbatim": "4. 四根全部必須晚於D2。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_requires_exactly_four_followup_bars"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_requires_exactly_four_followup_bars",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_range_atr_threshold_is_inclusive; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-05",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-05",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 5,
+      "source_text_verbatim": "5. `range/ATR == 1.5`成立。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_range_atr_threshold_is_inclusive"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_range_atr_threshold_is_inclusive",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_range_atr_threshold_is_inclusive; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-06",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-06",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 6,
+      "source_text_verbatim": "6. `range/ATR >1.5`不成立。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_range_atr_threshold_is_inclusive"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_range_atr_threshold_is_inclusive",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_uses_pre_window_atr14_snapshot; AST assert count=4 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-07",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-07",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 7,
+      "source_text_verbatim": "7. 使用window前一completed session的Wilder ATR14。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_uses_pre_window_atr14_snapshot"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_uses_pre_window_atr14_snapshot",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_uses_pre_window_atr14_snapshot; AST assert count=4 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-08",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-08",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 8,
+      "source_text_verbatim": "8. Window內ATR變化不得修改該window denominator。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_uses_pre_window_atr14_snapshot"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_uses_pre_window_atr14_snapshot",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_invalid_sideways_atr_skips_window_and_keeps_observing; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-09",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-09",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 9,
+      "source_text_verbatim": "9. Invalid pre-window ATR令該window不可評估，但observer繼續。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_invalid_sideways_atr_skips_window_and_keeps_observing"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_invalid_sideways_atr_skips_window_and_keeps_observing",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-10",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-10",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 10,
+      "source_text_verbatim": "10. 價格全在MA上方仍可Sideways。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_can_be_below_ma_without_triggering_return_or_retest; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-11",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-11",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 11,
+      "source_text_verbatim": "11. 價格全在MA下方仍可Sideways。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_can_be_below_ma_without_triggering_return_or_retest"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_can_be_below_ma_without_triggering_return_or_retest",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma, tests/test_ma_breakout_analytics.py::test_sideways_can_be_below_ma_without_triggering_return_or_retest; AST assert count=8 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-12",
+      "coverage_status": "COMBINED_DIRECT",
+      "requirement_id": "REV3-TEST-12",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 12,
+      "source_text_verbatim": "12. Sideways不要求K線穿MA。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma",
+        "tests/test_ma_breakout_analytics.py::test_sideways_can_be_below_ma_without_triggering_return_or_retest"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_entangled_signal_can_resolve_without_sideways; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-13",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-13",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 13,
+      "source_text_verbatim": "13. `ENTANGLED=true、SIDEWAYS=false`可成立。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_entangled_signal_can_resolve_without_sideways"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_entangled_signal_can_resolve_without_sideways",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-14",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-14",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 14,
+      "source_text_verbatim": "14. `ENTANGLED=false、SIDEWAYS=true`可成立。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_sideways_is_independent_of_ma_entanglement_and_can_be_above_ma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_trend_away_requires_clear_side_and_new_advance_over_d1_close; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-15",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-15",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 15,
+      "source_text_verbatim": "15. Long僅clear above但`Close<=Close(D1)`不得Trend。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_trend_away_requires_clear_side_and_new_advance_over_d1_close"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_trend_away_requires_clear_side_and_new_advance_over_d1_close",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_long_trend_progress_without_clear_above_is_not_trend_continuation; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-16",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-16",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 16,
+      "source_text_verbatim": "16. Long `Close>Close(D1)`但未clear above不得Trend。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_long_trend_progress_without_clear_above_is_not_trend_continuation"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_long_trend_progress_without_clear_above_is_not_trend_continuation",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_trend_away_requires_clear_side_and_new_advance_over_d1_close; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-17",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-17",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 17,
+      "source_text_verbatim": "17. Long兩條同時成立才Trend。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_trend_away_requires_clear_side_and_new_advance_over_d1_close"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_trend_away_requires_clear_side_and_new_advance_over_d1_close",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_trend_away_requires_clear_side_and_new_advance_over_d1_close; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-18",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-18",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 18,
+      "source_text_verbatim": "18. Long `Close==Close(D1)`不得Trend。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_trend_away_requires_clear_side_and_new_advance_over_d1_close"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_trend_away_requires_clear_side_and_new_advance_over_d1_close",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_short_trend_away_requires_clear_side_and_a_new_d1_low_close; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-19",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-19",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 19,
+      "source_text_verbatim": "19. Short僅clear below但`Close>=Close(D1)`不得Trend。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_short_trend_away_requires_clear_side_and_a_new_d1_low_close"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_short_trend_away_requires_clear_side_and_a_new_d1_low_close",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_short_trend_away_requires_clear_side_and_a_new_d1_low_close; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-20",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-20",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 20,
+      "source_text_verbatim": "20. Short兩條同時成立才Trend。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_short_trend_away_requires_clear_side_and_a_new_d1_low_close"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_short_trend_away_requires_clear_side_and_a_new_d1_low_close",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_trend_away_does_not_use_day1_high_or_low_gate; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-21",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-21",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 21,
+      "source_text_verbatim": "21. Day1 High/Low不參與Trend gate。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_trend_away_does_not_use_day1_high_or_low_gate"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_trend_away_does_not_use_day1_high_or_low_gate",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_retest_precedes_trend_when_both_are_true; AST assert count=1 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-22",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-22",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 22,
+      "source_text_verbatim": "22. 同日Retest及Trend成立時選Retest。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_retest_precedes_trend_when_both_are_true"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_retest_precedes_trend_when_both_are_true",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_trend_continuation_precedes_sideways_when_both_conditions_are_true; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-23",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-23",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 23,
+      "source_text_verbatim": "23. 同日Trend及Sideways成立時選Trend。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_trend_continuation_precedes_sideways_when_both_conditions_are_true"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_trend_continuation_precedes_sideways_when_both_conditions_are_true",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill; AST assert count=13 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-24",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-24",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 24,
+      "source_text_verbatim": "24. POST_D1 Breakout target從D2 Open開始。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_volume_conditioned_post_d1_target_origin_begins_at_d2_open; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-25",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-25",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 25,
+      "source_text_verbatim": "25. Volume-conditioned target從D2 Open開始。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_volume_conditioned_post_d1_target_origin_begins_at_d2_open"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_volume_conditioned_post_d1_target_origin_begins_at_d2_open",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill; AST assert count=13 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-26",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-26",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 26,
+      "source_text_verbatim": "26. POST_D2_SUCCESS target從D3 Open開始。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill; AST assert count=13 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-27",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-27",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 27,
+      "source_text_verbatim": "27. Day2+Volume target從D3 Open開始。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_post_d1_starts_on_d2_and_post_d2_success_starts_on_d3_without_backfill",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_d2_intraday_target_and_stop_are_not_backfilled_into_post_d2_success; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-28",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-28",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 28,
+      "source_text_verbatim": "28. D2 intraday target hit不得回填POST_D2_SUCCESS outcome。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_d2_intraday_target_and_stop_are_not_backfilled_into_post_d2_success"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_d2_intraday_target_and_stop_are_not_backfilled_into_post_d2_success",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_d2_intraday_target_and_stop_are_not_backfilled_into_post_d2_success; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-29",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-29",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 29,
+      "source_text_verbatim": "29. D2 intraday stop hit不得回填POST_D2_SUCCESS outcome。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_d2_intraday_target_and_stop_are_not_backfilled_into_post_d2_success"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_d2_intraday_target_and_stop_are_not_backfilled_into_post_d2_success",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_d2_intraday_target_and_stop_are_not_backfilled_into_post_d2_success; AST assert count=6 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-30",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-30",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 30,
+      "source_text_verbatim": "30. 相同D2 hit可正常影響POST_D1 outcome。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_d2_intraday_target_and_stop_are_not_backfilled_into_post_d2_success"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_d2_intraday_target_and_stop_are_not_backfilled_into_post_d2_success",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_post_d2_success_first_dynamic_stop_uses_d2_completed_ma; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-31",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-31",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 31,
+      "source_text_verbatim": "31. POST_D2 long首個stop使用`MA(D2)×0.985`。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_post_d2_success_first_dynamic_stop_uses_d2_completed_ma"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_post_d2_success_first_dynamic_stop_uses_d2_completed_ma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_post_d2_success_first_dynamic_stop_uses_d2_completed_ma; AST assert count=3 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-32",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-32",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 32,
+      "source_text_verbatim": "32. POST_D2 short首個stop使用`MA(D2)×1.015`。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_post_d2_success_first_dynamic_stop_uses_d2_completed_ma"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_post_d2_success_first_dynamic_stop_uses_d2_completed_ma",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_target_families_have_independent_outcomes; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-33",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-33",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 33,
+      "source_text_verbatim": "33. 同一event/target可保存兩個observation origins。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_target_families_have_independent_outcomes"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_target_families_have_independent_outcomes",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_target_aggregates_do_not_mix_observation_origins; AST assert count=4 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-34",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-34",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 34,
+      "source_text_verbatim": "34. POST_D1與POST_D2 aggregates不可混線。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_target_aggregates_do_not_mix_observation_origins"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_target_aggregates_do_not_mix_observation_origins",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_day2_success_without_d3_is_right_censored; AST assert count=4 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-35",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-35",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 35,
+      "source_text_verbatim": "35. Day2 success但無D3時right-censored，不算failure。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_day2_success_without_d3_is_right_censored"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_day2_success_without_d3_is_right_censored",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_failure_observer_has_no_fixed_followup_timeout; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-36",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-36",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 36,
+      "source_text_verbatim": "36. 無fixed Sideways timeout。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_failure_observer_has_no_fixed_followup_timeout"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_failure_observer_has_no_fixed_followup_timeout",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_failure_observer_has_no_fixed_followup_timeout; AST assert count=2 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-37",
+      "coverage_status": "DIRECT",
+      "requirement_id": "REV3-TEST-37",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 37,
+      "source_text_verbatim": "37. 無fixed Day2-failure observation timeout。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_failure_observer_has_no_fixed_followup_timeout"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_failure_observer_has_no_fixed_followup_timeout",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    },
+    {
+      "assertion_summary": "Independent binding: tests/test_ma_breakout_analytics.py::test_entangled_signal_can_resolve_without_sideways, tests/test_ma_breakout_analytics.py::test_entanglement_formed_after_day1_does_not_backpaint_cohort; AST assert count=7 (syntax sanity only).",
+      "binding_id": "pytest:REV3-TEST-38",
+      "coverage_status": "COMBINED_DIRECT",
+      "requirement_id": "REV3-TEST-38",
+      "source_section": "## 7. 受影響 test matrix / 新增direct tests",
+      "source_spec": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "source_test_number": 38,
+      "source_text_verbatim": "38. Entanglement cohort結果不受Sideways規則修改。",
+      "status": "ACTIVE",
+      "superseded_by_requirement_id": null,
+      "test_bindings": [
+        "tests/test_ma_breakout_analytics.py::test_entangled_signal_can_resolve_without_sideways",
+        "tests/test_ma_breakout_analytics.py::test_entanglement_formed_after_day1_does_not_backpaint_cohort"
+      ],
+      "test_file": "tests/test_ma_breakout_analytics.py",
+      "test_function": "test_entangled_signal_can_resolve_without_sideways",
+      "verification_kind": "EXECUTION_BEHAVIOR"
+    }
+  ],
+  "source_authority": "FROZEN_SOL_OUTPUTS_ONLY",
+  "source_fingerprints": {
+    "master": {
+      "normalized_bytes": 20862,
+      "normalized_sha256": "d5d08500af89fce61c33c9004af23f4656bb677be10462a32c8a26641eaf66ec",
+      "path": "MA_BREAKOUT_ANALYTICS_V1_REVISION_2_SOL_FROZEN_OUTPUT.txt",
+      "raw_bytes": 21855,
+      "raw_sha256": "f01a50e304db4e654c57a0cfb560dc98ddc0a34aa478cd6248aa498f6434c69d"
+    },
+    "revision_3": {
+      "normalized_bytes": 10270,
+      "normalized_sha256": "80c913dd26cb0adef57e259a4660da48bb681406e0ec25cfa947ebebdae485f1",
+      "path": "MA_BREAKOUT_ANALYTICS_V1_REVISION_3_SOL_FROZEN_AMENDMENT.txt",
+      "raw_bytes": 10759,
+      "raw_sha256": "a1b80bfd9db2b4d6d1d252d050573eaf4bf40e535d698d2fee7fda38bf3b4448"
+    }
+  },
+  "strategy_revision": "MA_BREAKOUT_ANALYTICS_V1",
+  "traceability_revision": 3
+}

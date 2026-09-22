@@ -1,0 +1,22 @@
+- Sideways 4 bars
+- 3 bars不能成立
+- exactly 1.5 ATR inclusive
+- >1.5不成立
+- pre-window ATR14
+- invalid ATR繼續觀察
+- Sideways可完全在MA上方
+- Sideways可完全在MA下方
+- Sideways不要求穿MA
+- Entangled true / Sideways false
+- Entangled false / Sideways true
+- Trend需clear side + exceed D1 Close
+- Retest > Trend
+- Trend > Sideways
+- POST_D1從D2 Open
+- POST_D2_SUCCESS從D3 Open
+- D2 intraday不得回填POST_D2
+- POST_D1與POST_D2 outcome可並存
+- observation origin進unique identity
+- aggregates不得混合origin
+- 無fixed target timeout
+- 無fixed failure timeout

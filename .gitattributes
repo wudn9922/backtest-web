@@ -1,0 +1,7 @@
+# Keep ordinary text usable across platforms while preserving byte-authoritative
+# strategy artifacts and code whose exact SHA-256 is part of frozen acceptance.
+* text=auto
+research/specs/** -text
+backend/app/backtest/** -text
+backend/app/ma_box/** -text
+backend/app/ma_breakout_analytics/** -text
