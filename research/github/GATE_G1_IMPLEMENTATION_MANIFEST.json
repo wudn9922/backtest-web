@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "gate": "G1",
+  "result": "PUBLIC_ROOT_AND_FIRST_CI_VERIFIED",
+  "repository": {
+    "full_name": "wudn9922/backtest-web",
+    "visibility": "public",
+    "default_branch": "main",
+    "remote_url": "https://github.com/wudn9922/backtest-web.git"
+  },
+  "history": {
+    "sanitized_root_sha": "2393ba54521caa45a3fa64f1735d4cd9b434b37d",
+    "audited_main_sha": "2393ba54521caa45a3fa64f1735d4cd9b434b37d",
+    "root_parent_count": 0,
+    "root_author_identity": "GitHub noreply verified",
+    "public_branches": ["main"],
+    "public_tags": [],
+    "old_gmail_baseline_reachable": false,
+    "local_pre_cloud_v1_tag_pushed": false,
+    "abandoned_gcp_branch_pushed": false
+  },
+  "source_tree": {
+    "root_blob_count": 299,
+    "manifest_is_followup_metadata": true,
+    "no_database_backup_or_abandoned_c1_payload": true
+  },
+  "ci": {
+    "workflow_path": ".github/workflows/ci.yml",
+    "workflow_sha256": "882d06e7355dd22441d0441c8fc3144c18b2b503a6ebb8a3a7d159e78d4ed7b7",
+    "zero_cost_checker_path": "scripts/check_zero_cost_policy.py",
+    "zero_cost_checker_sha256": "efea9fa17318ac461580354d3231c85f58f145a8628ec72067665254b1f0c9cd",
+    "runner": "ubuntu-24.04",
+    "workflow_permissions": {
+      "contents": "read"
+    },
+    "first_run": {
+      "run_id": 36011208533,
+      "run_number": 1,
+      "url": "https://github.com/wudn9922/backtest-web/actions/runs/36011208533",
+      "head_sha": "2393ba54521caa45a3fa64f1735d4cd9b434b37d",
+      "status": "completed",
+      "conclusion": "success",
+      "job_name": "Frozen source and regression gates",
+      "job_duration_seconds": 125,
+      "checks": {
+        "zero_cost_policy": "PASS",
+        "secret_scan": "PASS",
+        "public_candidate_scan": "PASS",
+        "large_file_scan": "PASS",
+        "frozen_and_canonical_hashes": "PASS",
+        "compileall": "PASS",
+        "next_production_build": "PASS"
+      },
+      "tests": {
+        "ma_box": {"passed": 99, "failed": 0, "skipped": 0, "xfail": 0, "deselected": 0, "warnings": 130},
+        "analytics_traceability": {"passed": 110, "failed": 0, "skipped": 0, "xfail": 0, "deselected": 0, "warnings": 1},
+        "legacy_remainder": {"passed": 246, "failed": 0, "skipped": 0, "xfail": 0, "deselected": 0, "warnings": 4},
+        "all_backend": {"passed": 455, "failed": 0, "skipped": 0, "xfail": 0, "deselected": 0, "warnings": 4},
+        "frontend": {"passed": 67, "failed": 0, "skipped": 0, "todo": 0, "warnings": 0}
+      }
+    }
+  },
+  "frozen_hashes": {
+    "ma_box_revision_3": "1edad0648095eb8261a79e6f9bf712f23a6dbb4db9271a1f0273ad7c79dbab0d",
+    "analytics_source_a": "f01a50e304db4e654c57a0cfb560dc98ddc0a34aa478cd6248aa498f6434c69d",
+    "analytics_source_b": "a1b80bfd9db2b4d6d1d252d050573eaf4bf40e535d698d2fee7fda38bf3b4448",
+    "analytics_combined": "0ac4a0fad9cbbc747b104b19e420e35368937e3359fd462786bd6317ad0d7647"
+  },
+  "canonical_hashes": {
+    "backend/app/backtest/execution.py": "6883ab436e4cc5bbf5c988aaa2ddb7fb5b3eddbb75ce91ee23ce384129a153ad",
+    "backend/app/backtest/portfolio.py": "244203e4bb000ac5c723e288ab6457e9b5e1bf39b3940629ed9d9abd525e5d4e",
+    "backend/app/backtest/indicators.py": "c7ba15b4c0c2a19e8880ef4827c170d8f64ffbcefd558464e5054157e38b2926",
+    "backend/app/backtest/engine.py": "070729788e573e57d2d50ff17c3ed73c7a7ca7d9c3ab3daa000d4e5edd34997f",
+    "backend/app/backtest/models.py": "0a88652416ddd272ecffc202358ba30f435bf7e8d83a5b53236abdf9308e98d1",
+    "backend/app/backtest/strategies/simple_ma_breakout.py": "396afef2a6cf70977aa9ab2f43bf417e17459bc7dd20260c94e5a4a8e0e8f59e",
+    "backend/app/backtest/strategies/advanced_ma_breakout.py": "bfd021e54b45b72ab4a679e83e494b924691b21f6abca05beb83786e56f6d7b8",
+    "backend/app/backtest/strategies/advanced_day1_stop.py": "a311dfc64abbbf37d3d1b4f30cc9b19879fe8e0f71c73c4c52853aeccbd4e737",
+    "backend/app/backtest/metrics.py": "70cc400f0af825649456872bba549e130ab6db93773b5878a83b4d97cfaafed5",
+    "backend/app/ma_box/engine.py": "4bf351516e97cc1cc3a72524af8e9aced6b79e76321371aaaa97268ea6b80a01"
+  },
+  "database_audit": {
+    "production_database_modified_by_g1": false,
+    "baseline_counts": {
+      "backtests": 13842,
+      "position_audits": 110458,
+      "optimization_cache": 13741,
+      "ma_box_rows": 0,
+      "analytics_rows": 0
+    },
+    "public_tree_contains_database_files": false
+  },
+  "repository_settings": {
+    "ruleset_count": 0,
+    "main_reported_protected": false,
+    "workflow_token_permissions_observed": {"contents": "read"},
+    "repository_default_actions_permissions": "not_readable_through_current_github_integration"
+  },
+  "scope": {
+    "g2_started": false,
+    "pages_enabled": false,
+    "releases_created": false,
+    "other_branches_or_tags_pushed": false
+  }
+}
